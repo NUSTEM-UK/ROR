@@ -1,0 +1,59 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+ALL	../trellis/instruments.py	/^ALL = ("00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11",$/;"	kind:variable	line:40
+ALL	../trellis/mod_orchestra.py	/^from instruments import instruments, ALL$/;"	kind:namespace	line:16
+Adafruit_Trellis	../trellis/RobotOrchestra-Trellis.py	/^import Adafruit_Trellis$/;"	kind:namespace	line:17
+Button	../trellis/RobotOrchestra-Trellis.py	/^from gpiozero import Button$/;"	kind:namespace	line:20
+I2C_BUS	../trellis/RobotOrchestra-Trellis.py	/^I2C_BUS = 1$/;"	kind:variable	line:91
+NUMTRELLIS	../trellis/RobotOrchestra-Trellis.py	/^NUMTRELLIS = 8$/;"	kind:variable	line:80
+PLAYERS	../trellis/instruments.py	/^PLAYERS = {"ZERO": ("00",),$/;"	kind:variable	line:50
+RepeatedTimer	../trellis/RobotOrchestra-Trellis.py	/^class RepeatedTimer(object):$/;"	kind:class	line:31
+RobotOrchestra-Trellis.py	../trellis/RobotOrchestra-Trellis.py	1;"	kind:file	line:1
+Timer	../trellis/RobotOrchestra-Trellis.py	/^from threading import Timer$/;"	kind:namespace	line:16
+__init__	../trellis/RobotOrchestra-Trellis.py	/^    def __init__(self, interval, function, *args):$/;"	kind:member	line:37
+_run	../trellis/RobotOrchestra-Trellis.py	/^    def _run(self):$/;"	kind:member	line:46
+bpm	../trellis/RobotOrchestra-Trellis.py	/^bpm = 60.0 \/ tempo$/;"	kind:variable	line:26
+buttonGrid	../trellis/RobotOrchestra-Trellis.py	/^buttonGrid = np.array($/;"	kind:variable	line:107
+currentBeat	../trellis/RobotOrchestra-Trellis.py	/^currentBeat = 0  # Keep track of which beat we're playing.$/;"	kind:variable	line:23
+instruments	../trellis/instruments.py	/^instruments = {"00": "skutter_18:FE:34:FD:91:AD",$/;"	kind:variable	line:3
+instruments	../trellis/mod_orchestra.py	/^from instruments import instruments, ALL$/;"	kind:namespace	line:16
+instruments.py	../trellis/instruments.py	1;"	kind:file	line:1
+matrix0	../trellis/RobotOrchestra-Trellis.py	/^matrix0 = Adafruit_Trellis.Adafruit_Trellis()$/;"	kind:variable	line:66
+matrix1	../trellis/RobotOrchestra-Trellis.py	/^matrix1 = Adafruit_Trellis.Adafruit_Trellis()$/;"	kind:variable	line:67
+matrix2	../trellis/RobotOrchestra-Trellis.py	/^matrix2 = Adafruit_Trellis.Adafruit_Trellis()$/;"	kind:variable	line:68
+matrix3	../trellis/RobotOrchestra-Trellis.py	/^matrix3 = Adafruit_Trellis.Adafruit_Trellis()$/;"	kind:variable	line:69
+matrix4	../trellis/RobotOrchestra-Trellis.py	/^matrix4 = Adafruit_Trellis.Adafruit_Trellis()$/;"	kind:variable	line:70
+matrix5	../trellis/RobotOrchestra-Trellis.py	/^matrix5 = Adafruit_Trellis.Adafruit_Trellis()$/;"	kind:variable	line:71
+matrix6	../trellis/RobotOrchestra-Trellis.py	/^matrix6 = Adafruit_Trellis.Adafruit_Trellis()$/;"	kind:variable	line:72
+matrix7	../trellis/RobotOrchestra-Trellis.py	/^matrix7 = Adafruit_Trellis.Adafruit_Trellis()$/;"	kind:variable	line:73
+message	../trellis/mod_orchestra.py	/^def message(topic, payload):$/;"	kind:function	line:24
+mod_orchestra.py	../trellis/mod_orchestra.py	1;"	kind:file	line:1
+mqtt	../trellis/mod_orchestra.py	/^import paho.mqtt.client as mqtt$/;"	kind:namespace	line:15
+mqtt_server	../trellis/mod_orchestra.py	/^mqtt_server = "10.0.1.5"$/;"	kind:variable	line:20
+mqttc	../trellis/mod_orchestra.py	/^mqttc = mqtt.Client()$/;"	kind:variable	line:18
+np	../trellis/RobotOrchestra-Trellis.py	/^import numpy as np$/;"	kind:namespace	line:18
+numKeys	../trellis/RobotOrchestra-Trellis.py	/^numKeys = NUMTRELLIS * 16$/;"	kind:variable	line:81
+paho	../trellis/mod_orchestra.py	/^import paho.mqtt.client as mqtt$/;"	kind:namespace	line:15
+play	../trellis/mod_orchestra.py	/^def play(robots):$/;"	kind:function	line:62
+playBeat	../trellis/RobotOrchestra-Trellis.py	/^def playBeat():$/;"	kind:function	line:133
+playset	../trellis/RobotOrchestra-Trellis.py	/^from mod_orchestra import playset$/;"	kind:namespace	line:19
+playset	../trellis/mod_orchestra.py	/^def playset(beatset):$/;"	kind:function	line:69
+rt	../trellis/RobotOrchestra-Trellis.py	/^rt = RepeatedTimer(bpm, playBeat)$/;"	kind:variable	line:191
+running	../trellis/RobotOrchestra-Trellis.py	/^                running = False$/;"	kind:variable	line:220
+running	../trellis/RobotOrchestra-Trellis.py	/^                running = True$/;"	kind:variable	line:225
+running	../trellis/RobotOrchestra-Trellis.py	/^running = True$/;"	kind:variable	line:28
+send_beats	../trellis/mod_orchestra.py	/^def send_beats(robots, beat_pattern):$/;"	kind:function	line:54
+set_active	../trellis/mod_orchestra.py	/^def set_active(robots):$/;"	kind:function	line:40
+set_inactive	../trellis/mod_orchestra.py	/^def set_inactive(robots):$/;"	kind:function	line:47
+start	../trellis/RobotOrchestra-Trellis.py	/^    def start(self):$/;"	kind:member	line:52
+startStopButton	../trellis/RobotOrchestra-Trellis.py	/^startStopButton = Button(5, pull_up=True, bounce_time=0.2)$/;"	kind:variable	line:27
+stop	../trellis/RobotOrchestra-Trellis.py	/^    def stop(self):$/;"	kind:member	line:59
+tempo	../trellis/RobotOrchestra-Trellis.py	/^tempo = 120  # Barfs if we go much above 120; playBeat doesn't complete before$/;"	kind:variable	line:24
+time	../trellis/RobotOrchestra-Trellis.py	/^import time$/;"	kind:namespace	line:15
+time	../trellis/mod_orchestra.py	/^import time$/;"	kind:namespace	line:14
+trellis	../trellis/RobotOrchestra-Trellis.py	/^trellis = Adafruit_Trellis.Adafruit_TrellisSet(matrix0, matrix1, matrix2,$/;"	kind:variable	line:75
+twitch	../trellis/mod_orchestra.py	/^def twitch(robots):$/;"	kind:function	line:34
