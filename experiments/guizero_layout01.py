@@ -7,7 +7,7 @@ app = App()
 
 my_box = Box(app, layout="grid")
 my_button = PushButton(my_box, text="Button 1", command=do_nothing, grid=[0,0])
-my_button2 = PushButton(my_box, text="Button 2", command=do_nothing, grid=[0,1])
+my_button2 = PushButton(my_box, text="Button 2", command=do_nothing, grid=[1,0])
 
 my_waffle = Waffle(app, height=8, width=16, remember=True)
 
