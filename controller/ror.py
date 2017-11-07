@@ -132,13 +132,15 @@ def startStopButton():
         # Stop playback!
         print('>>> STOP')
         rt.stop()
-        buttonStartStop.set_text("START")
+        buttonStartStop.value = "START"
+        # buttonStartStop.bg = "green"
         running = False
     else:
         # Start playback!
         print('>>> START')
         rt.start()
-        buttonStartStop.set_text("STOP")
+        buttonStartStop.value = "STOP"
+        # buttonStartStop.bg = "red"
         running = True
 
 
@@ -150,7 +152,7 @@ def fasterButton():
     bpm = 60.0/tempo
     rt.stop()
     rt = RepeatedTimer(bpm, playBeat)
-    textBpm.set(tempo)
+    textBpm.value = tempo
 
 
 def slowerButton():
@@ -160,7 +162,7 @@ def slowerButton():
         tempo = 30
     rt.stop()
     rt = RepeatedTimer(bpm, playBeat)
-    textBpm.set(tempo)
+    textBpm.value = tempo
 
 
 # ...and now we can actually run some code.
@@ -172,10 +174,10 @@ app = App("Robot Orchestra", height=(50 + padding + num_channels*(dimension+spac
 
 box = Box(app, layout="grid")
 textBpmLabel = Text(box, text="bpm", grid=[0,0])
-textBpm = Text(box, text="120", grid=[0,1])
-buttonFaster = PushButton(box, command=fasterButton, text="Faster", grid=[0,2])
-buttonSlower = PushButton(box, command=slowerButton, text="Slower", grid=[0,3])
-buttonStartStop = PushButton(box, command=startStopButton, text="STOP", grid=[0,4])
+textBpm = Text(box, text="120", grid=[1,0])
+buttonFaster = PushButton(box, command=fasterButton, text="Faster", grid=[2,0])
+buttonSlower = PushButton(box, command=slowerButton, text="Slower", grid=[3,0])
+buttonStartStop = PushButton(box, command=startStopButton, text="STOP", grid=[4,0])
 
 beat_set = Waffle(app, height=num_channels, width=num_beats, dim=dimension,
                   pad=spacing, dotty=False, remember=True, command=change_pixel)
