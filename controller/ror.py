@@ -2,22 +2,22 @@
 """
 
 
+from threading import Timer
 import paho.mqtt.client as mqtt # requires `pip install paho-mqtt`
 from guizero import App, Waffle, Text, Box, PushButton
-import time
-from threading import Timer
 import numpy as np
 
-dimension = 20
-padding = 20
-spacing = 5
 num_beats = 16
 num_channels = 8
+dimension = 30
+padding = 10 # Sides of window. I think
+spacing = 5 # Between buttons in Waffle.
 
 # Nasty global variables. I should probably refactor soon.
 currentBeat = 0 # Keep track of which beat we're playing
 
 # Set up tempo and beats per minute. These variables are named wrong way around. Oops.
+# TODO: Fix this horrific miscomprehension of the nature of time.
 tempo = 120
 bpm = 60.0 / tempo
 
@@ -143,7 +143,7 @@ def startStopButton():
 
 
 def fasterButton():
-    global tempo, rt
+    global tempo, rt, bpm
     tempo += 5
     if tempo > 240:
         tempo = 240
@@ -162,21 +162,23 @@ def slowerButton():
     rt = RepeatedTimer(bpm, playBeat)
     textBpm.set(tempo)
 
+
 # ...and now we can actually run some code.
 print('Press Ctrl-C to quit.')
 
-app = App("Robot Orchestra", height=(100 + padding + num_channels*(dimension+spacing)),
-          width=(padding + num_beats*(dimension + spacing)), layout="auto")
+app = App("Robot Orchestra", height=(50 + padding + num_channels*(dimension+spacing)),
+          width=(padding + num_beats*(dimension + spacing)))
+# app = App("Robot Orchestra")
+
+box = Box(app, layout="grid")
+textBpmLabel = Text(box, text="bpm", grid=[0,0])
+textBpm = Text(box, text="120", grid=[0,1])
+buttonFaster = PushButton(box, command=fasterButton, text="Faster", grid=[0,2])
+buttonSlower = PushButton(box, command=slowerButton, text="Slower", grid=[0,3])
+buttonStartStop = PushButton(box, command=startStopButton, text="STOP", grid=[0,4])
 
 beat_set = Waffle(app, height=num_channels, width=num_beats, dim=dimension,
                   pad=spacing, dotty=False, remember=True, command=change_pixel)
-
-box = Box(app, layout="grid")
-textBpmLabel = Text(box, text="bpm", grid=[0,1])
-textBpm = Text(box, text="120", grid=[0,2])
-buttonFaster = PushButton(box, command=fasterButton, text="Faster", grid=[0,3])
-buttonSlower = PushButton(box, command=slowerButton, text="Slower", grid=[0,4])
-buttonStartStop = PushButton(box, command=startStopButton, text="STOP", grid=[0,5])
 
 try:
     # Initialise the timer, which will trigger at a rate specified by the
@@ -185,6 +187,6 @@ try:
     # Display the app window
     app.display()
 finally:
-    # Tear everything down that we've worked so hard to create
+    # Tear everything down we've worked so hard to create
     rt.stop()
     app.destroy()
