@@ -8,7 +8,7 @@ At time of writing (2017-11-07), this code relies on prerelease [GUIzero](https:
 This is not a pretty way of working. However, hopefully the issue will go away with the release of GUIzero 0.4.
 
 ## Experiments
-The `experiments` folder contains test code and in-progress work along the way. This is mostly lifted from documentation, but it might reveal our learning progress.
+The `experiments` folder contains test code and in-progress work along the way. This is mostly lifted from documentation, but it might reveal our learning process. A little.
 
 * `tkinter01.py`  
 Basic Tkinter GUI app, to test the Python3 Tkinter libraries are installed correctly.
