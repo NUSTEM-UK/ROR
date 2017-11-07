@@ -3,7 +3,7 @@
 
 
 import paho.mqtt.client as mqtt # requires `pip install paho-mqtt`
-from guizero import App, Waffle
+from guizero import App, Waffle, Text, Box, PushButton
 import time
 from threading import Timer
 import numpy as np
@@ -16,8 +16,12 @@ num_channels = 8
 
 # Nasty global variables. I should probably refactor soon.
 currentBeat = 0 # Keep track of which beat we're playing
+
+# Set up tempo and beats per minute. These variables are named wrong way around. Oops.
 tempo = 120
 bpm = 60.0 / tempo
+
+# Is the playback timer running? (hint: it will be, on program launch)
 running = True
 
 class RepeatedTimer(object):
@@ -116,57 +120,71 @@ def playBeat():
         currentBeat = 0
 
 
+def do_nothing():
+    """Example button callback"""
+    print("Button pushed")
+    return 0
+
+
+def startStopButton():
+    global running
+    if running:
+        # Stop playback!
+        print('>>> STOP')
+        rt.stop()
+        buttonStartStop.set_text("START")
+        running = False
+    else:
+        # Start playback!
+        print('>>> START')
+        rt.start()
+        buttonStartStop.set_text("STOP")
+        running = True
+
+
+def fasterButton():
+    global tempo, rt
+    tempo += 5
+    if tempo > 240:
+        tempo = 240
+    bpm = 60.0/tempo
+    rt.stop()
+    rt = RepeatedTimer(bpm, playBeat)
+    textBpm.set(tempo)
+
+
+def slowerButton():
+    global tempo, rt
+    tempo -= 5
+    if tempo < 30:
+        tempo = 30
+    rt.stop()
+    rt = RepeatedTimer(bpm, playBeat)
+    textBpm.set(tempo)
+
 # ...and now we can actually run some code.
 print('Press Ctrl-C to quit.')
 
-app = App("Robot Orchestra", height=(padding + num_channels*(dimension+spacing)), width=(padding + num_beats*(dimension + spacing)))
+app = App("Robot Orchestra", height=(100 + padding + num_channels*(dimension+spacing)),
+          width=(padding + num_beats*(dimension + spacing)), layout="auto")
 
-beat_set = Waffle(app, height=num_channels, width=num_beats, dim=dimension, pad=spacing, dotty=False, remember=True, command=change_pixel)
+beat_set = Waffle(app, height=num_channels, width=num_beats, dim=dimension,
+                  pad=spacing, dotty=False, remember=True, command=change_pixel)
 
-
-# Initialise the timer, which will trigger at a rate specified by the
-# bpm setting (ie, tempo)
+box = Box(app, layout="grid")
+textBpmLabel = Text(box, text="bpm", grid=[0,1])
+textBpm = Text(box, text="120", grid=[0,2])
+buttonFaster = PushButton(box, command=fasterButton, text="Faster", grid=[0,3])
+buttonSlower = PushButton(box, command=slowerButton, text="Slower", grid=[0,4])
+buttonStartStop = PushButton(box, command=startStopButton, text="STOP", grid=[0,5])
 
 try:
+    # Initialise the timer, which will trigger at a rate specified by the
+    # bpm setting (ie, tempo)
     rt = RepeatedTimer(bpm, playBeat)
+    # Display the app window
     app.display()
 finally:
+    # Tear everything down that we've worked so hard to create
     rt.stop()
     app.destroy()
-
-
-# The main loop now only needs to handle button presses.
-# try:
-#     while True:
-#         time.sleep(0.08)
-
-#         # If a button was just pressed or released...
-#         if trellis.readSwitches():
-#             # go through every button
-#             for i in range(numKeys):
-#                 # if it was pressed...
-#                 if trellis.justPressed(i):
-#                     print('Button: {0}'.format(i))
-#                     # Alternate the LED
-#                     if trellis.isLED(i):
-#                         trellis.clrLED(i)
-#                     else:
-#                         trellis.setLED(i)
-#             # Update Trellis display.
-#             # Disabled by default since this gets triggered by the
-#             # timer anyway, and too frequent writeDisplays tend to
-#             # send things a bit funky.
-#             # trellis.writeDisplay()
-#         if startStopButton.is_pressed:
-#             if running:
-#                 # Stop playback!
-#                 print('>>> STOP')
-#                 rt.stop()
-#                 running = False
-#             else:
-#                 # Start playback!
-#                 print('>>> START')
-#                 rt.start()
-#                 running = True
-# finally:
-#     rt.stop()
