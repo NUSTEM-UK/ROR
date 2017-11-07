@@ -3,6 +3,12 @@
 # at the screen), but the click positions are all wrong. Scaling is off.
 # ...which isn't a great surprise, since the numbers are all made up.
 
+# Installed GUIzero on the Mac with:
+# sudo pip install git+https://github.com/lawsie/guizero.git@version-0.4
+# (to get the prerelease version with clickable waffle installed)
+
+# NB. needs to run under python3, which is a bit of a pain in VS Code.
+
 from guizero import App, Waffle
 from tkinter import Frame
 

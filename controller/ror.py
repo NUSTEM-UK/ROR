@@ -3,9 +3,16 @@
 
 
 import paho.mqtt.client as mqtt # requires `pip install paho-mqtt`
+from guizero import App, Waffle
 import time
 from threading import Timer
 import numpy as np
+
+dimension = 20
+padding = 20
+spacing = 5
+num_beats = 16
+num_channels = 8
 
 # Nasty global variables. I should probably refactor soon.
 currentBeat = 0 # Keep track of which beat we're playing
@@ -47,13 +54,17 @@ class RepeatedTimer(object):
         self.is_running = False
 
 
-# We only need a few of the methods from the previous mod_orchestra, so we'll
-# simply declare them directly here.
-
 mqttc = mqtt.Client()
 mqtt_server = "10.0.1.5"
 
-def message(topic, payload)
+def change_pixel(x, y):
+    if beat_set.get_pixel(x, y) == 'white':
+        beat_set.set_pixel(x, y, "red")
+    else:
+        beat_set.set_pixel(x, y, "white")
+
+
+def message(topic, payload):
     """Abstract out MQTT connection.
 
     Since it has to be done for each message, wrap it in a function.
@@ -71,72 +82,82 @@ def playBeat():
     global currentBeat
 
     # Make ourselves an empty array in which we'll hold this column of beats
-    curState = np.array([0, 0, 0, 0, 0, 0, 0, 0])
-
-    # Trellis stuff here needs stripping out
-    target = buttonGrid[0, currentBeat]
+    curState = np.zeros(num_channels, dtype=np.int)
 
     # Get current state of this column of buttons
-    for row in range(8):
-        curState[row] = trellis.isLED(buttonGrid[row, currentBeat])
-
+    for row in range(num_channels):
+        if beat_set.get_pixel(currentBeat, row) == "white":
+            curState[row] = 0
+        else:
+            curState[row] = 1
+    
     # Concatenate array into string, for MQTT sending
     # array2string adds square braces; slice to remove them.
     curStateString = np.array2string(curState, separator='')[1:-1]
-    # print curStateString
+    
+    # Just output to console, for now
+    print(currentBeat, curStateString)
 
     # Command the orchestra!
     playset(curStateString)
    
     # set up for next beat, looping when we reach the end.
     currentBeat += 1
-    if currentBeat > 15:
+    if currentBeat > (num_beats - 1):
         currentBeat = 0
 
 
 # ...and now we can actually run some code.
 print('Press Ctrl-C to quit.')
 
-# Initialise the timer, which will trigger at a rate specified by the
-# bpm setting (ie, tempo)
-rt = RepeatedTimer(bpm, playBeat)
+app = App("Waffle!", height=(padding + num_channels*(dimension+spacing)), width=(padding + num_beats*(dimension + spacing)))
+
+beat_set = Waffle(app, height=num_channels, width=num_beats, dim=dimension, pad=spacing, dotty=False, remember=True, command=change_pixel)
+
 
 # Initialise the timer, which will trigger at a rate specified by the
 # bpm setting (ie, tempo)
-rt = RepeatedTimer(bpm, playBeat)
 
-# The main loop now only needs to handle button presses.
 try:
-    while True:
-        time.sleep(0.08)
-
-        # If a button was just pressed or released...
-        if trellis.readSwitches():
-            # go through every button
-            for i in range(numKeys):
-                # if it was pressed...
-                if trellis.justPressed(i):
-                    print('Button: {0}'.format(i))
-                    # Alternate the LED
-                    if trellis.isLED(i):
-                        trellis.clrLED(i)
-                    else:
-                        trellis.setLED(i)
-            # Update Trellis display.
-            # Disabled by default since this gets triggered by the
-            # timer anyway, and too frequent writeDisplays tend to
-            # send things a bit funky.
-            # trellis.writeDisplay()
-        if startStopButton.is_pressed:
-            if running:
-                # Stop playback!
-                print('>>> STOP')
-                rt.stop()
-                running = False
-            else:
-                # Start playback!
-                print('>>> START')
-                rt.start()
-                running = True
+    rt = RepeatedTimer(bpm, playBeat)
+    app.display()
 finally:
     rt.stop()
+    app.destroy()
+
+
+# The main loop now only needs to handle button presses.
+# try:
+#     while True:
+#         time.sleep(0.08)
+
+#         # If a button was just pressed or released...
+#         if trellis.readSwitches():
+#             # go through every button
+#             for i in range(numKeys):
+#                 # if it was pressed...
+#                 if trellis.justPressed(i):
+#                     print('Button: {0}'.format(i))
+#                     # Alternate the LED
+#                     if trellis.isLED(i):
+#                         trellis.clrLED(i)
+#                     else:
+#                         trellis.setLED(i)
+#             # Update Trellis display.
+#             # Disabled by default since this gets triggered by the
+#             # timer anyway, and too frequent writeDisplays tend to
+#             # send things a bit funky.
+#             # trellis.writeDisplay()
+#         if startStopButton.is_pressed:
+#             if running:
+#                 # Stop playback!
+#                 print('>>> STOP')
+#                 rt.stop()
+#                 running = False
+#             else:
+#                 # Start playback!
+#                 print('>>> START')
+#                 rt.start()
+#                 running = True
+# finally:
+#     rt.stop()
