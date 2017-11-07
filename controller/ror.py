@@ -88,19 +88,28 @@ def playBeat():
     for row in range(num_channels):
         if beat_set.get_pixel(currentBeat, row) == "white":
             curState[row] = 0
+            beat_set.set_pixel(currentBeat, row, "blue")
         else:
             curState[row] = 1
+            beat_set.set_pixel(currentBeat, row, "white")
     
     # Concatenate array into string, for MQTT sending
     # array2string adds square braces; slice to remove them.
     curStateString = np.array2string(curState, separator='')[1:-1]
-    
+        
     # Just output to console, for now
     print(currentBeat, curStateString)
 
     # Command the orchestra!
     playset(curStateString)
    
+    # Return column to previous colour
+    for row in range(num_channels):
+        if curState[row] == 0:
+            beat_set.set_pixel(currentBeat, row, "white")
+        else:
+            beat_set.set_pixel(currentBeat, row, "red")
+
     # set up for next beat, looping when we reach the end.
     currentBeat += 1
     if currentBeat > (num_beats - 1):
@@ -110,7 +119,7 @@ def playBeat():
 # ...and now we can actually run some code.
 print('Press Ctrl-C to quit.')
 
-app = App("Waffle!", height=(padding + num_channels*(dimension+spacing)), width=(padding + num_beats*(dimension + spacing)))
+app = App("Robot Orchestra", height=(padding + num_channels*(dimension+spacing)), width=(padding + num_beats*(dimension + spacing)))
 
 beat_set = Waffle(app, height=num_channels, width=num_beats, dim=dimension, pad=spacing, dotty=False, remember=True, command=change_pixel)
 
