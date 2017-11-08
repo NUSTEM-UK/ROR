@@ -59,7 +59,8 @@ class RepeatedTimer(object):
 
 
 mqttc = mqtt.Client()
-mqtt_server = "10.0.1.5"
+# mqtt_server = "10.0.1.5"
+mqtt_server = "127.0.0.1"
 
 def change_pixel(x, y):
     if beat_set.get_pixel(x, y) == 'white':
