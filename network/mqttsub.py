@@ -2,17 +2,19 @@
 import paho.mqtt.client as mqtt
 
 
-def on_connect(client, userdata, rc):
+def on_connect(self, client, userdata, rc):
     """Connect to MQTT broker."""
     print("Connected with result code: " + str(rc))
-    client.subscribe("#")
+    self.subscribe("#")
 
 
 def on_message(client, userdata, msg):
     """Output diagnostic when message sent via broker."""
-    print("Topic:", msg.topic + '  :  Message: ' + msg.payload)
+    # print("Topic:", msg.topic + '  :  Message: ' + msg.payload)
+    print(msg.topic, msg.payload)
 
 client = mqtt.Client()
+
 client.on_connect = on_connect
 client.on_message = on_message
 
