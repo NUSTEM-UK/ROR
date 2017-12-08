@@ -3,26 +3,33 @@
 See PinFactory documentation here: 
 http://gpiozero.readthedocs.io/en/stable/api_pins.html#changing-the-pin-factory
 
-(need to use pigpio factory for better PWM handling)
+Using pigpio for better PWM handling (drives more servos).
+** Need to ensure pigpiod us running: `sudo pigpiod` before running this **
 """
 import paho.mqtt.client as mqtt
 from time import sleep
-from gpiozero import Servo
+from gpiozero import Device, Servo
+from gpiozero.pins.pigpio import PiGPIOFactory
+
+# Default to pigpio pin factory, for hardware PWM
+# (allows more servos to be controlled)
+Device.pin_factory = PiGPIOFactory()
 
 myservo = [Servo(27), Servo(22), Servo(10), Servo(11),
            Servo(6), Servo(13), Servo(19), Servo(26)]
 
 
-def on_connect(client, userdata, rc):
+def on_connect(self, client, userdata, rc):
     """Connect to MQTT broker & subscribe to playset channel."""
     print("Connected with result code: " + str(rc))
-    client.subscribe("orchestra/playset")
+    self.subscribe("orchestra/playset")
 
 
 def on_message(client, userdata, msg):
     """Handle incoming messages."""
-    print("Topic:", msg.topic + '  :  Message: ' + msg.payload)
-    for i, beat in enumerate(msg.payload):
+    # print("Topic:", msg.topic + '  :  Message: ' + msg.payload)
+    print(msg.topic, msg.payload.decode('utf-8'))
+    for i, beat in enumerate(msg.payload.decode('utf-8')):
         # print(i, beat)
         if beat == "1":
             print(i, ": BONG!")

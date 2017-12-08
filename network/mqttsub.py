@@ -5,13 +5,16 @@ import paho.mqtt.client as mqtt
 def on_connect(self, client, userdata, rc):
     """Connect to MQTT broker."""
     print("Connected with result code: " + str(rc))
+    # NB. This deviates from documentation.
+    # ...but it works. Unlike the docs. Raspbian Stretch issue?
     self.subscribe("#")
 
 
 def on_message(client, userdata, msg):
     """Output diagnostic when message sent via broker."""
     # print("Topic:", msg.topic + '  :  Message: ' + msg.payload)
-    print(msg.topic, msg.payload)
+    # The above line is the documentation version... below actually works.
+    print(msg.topic, msg.payload.decode('utf-8'))
 
 client = mqtt.Client()
 
