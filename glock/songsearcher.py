@@ -1,4 +1,5 @@
-from jinglefilewalker import *
+#from jinglefilewalker import *
+from rttllist import *
 # dependency pip3 install fuzzywuzzy
 from fuzzywuzzy import fuzz
 from fuzzywuzzy import process
@@ -16,13 +17,13 @@ def searcher(tweet):
         #similars = set(tweetList).intersection(value)
         #matchLength = len(similars)
         #accuracy = matchLength/songLength
-        accuracy = fuzz.token_set_ratio(tweet,value)
+        accuracy = fuzz.token_set_ratio(tweet,key)
         if accuracy > bestAccuracy:
             bestGuess = key
             bestAccuracy = accuracy
     return(bestGuess, bestAccuracy)
 
 if __name__ == "__main__":
-    tweet = "#nustem christmas"
+    tweet = "#nustem walking"
     a,b = searcher(tweet)
     print(a,b)
