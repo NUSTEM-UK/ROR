@@ -1,16 +1,13 @@
 from twitcreds import *
 from twython import TwythonStreamer
+from songsearcher import *
 
-import glob
-
-filenames = glob.glob('xmassongs/*.bas')
-print(filenames)
-
-"""
 class MyStreamer(TwythonStreamer):
     def on_success(self, data):
         if 'text' in data:
             print(data['text'])
+            a,b = searcher(data['text'])
+            print(a, b)
 
     def on_error(self, status_code, data):
         print(status_code)
@@ -22,5 +19,4 @@ class MyStreamer(TwythonStreamer):
 stream = MyStreamer(APP_KEY, APP_SECRET, OAUTH_TOKEN, OAUTH_TOKEN_SECRET)
 
 while True:
-    stream.statuses.filter(track='twitter')
-    """
+    stream.statuses.filter(track='#copperglock')
