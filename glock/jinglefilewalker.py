@@ -13,6 +13,9 @@ for i in filenames:
     if i[-1] in ["1","2","3"]:
         i = i[:-1]
     i = i.lower()
-    i = i.split()
+    #i = i.split()
     # store in the song dictionary
     songdict[namestore]=i
+
+if __name__ == "__main__":
+    print(songdict)

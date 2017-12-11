@@ -16,7 +16,7 @@ class MyStreamer(TwythonStreamer):
         # Uncomment the next line!
         self.disconnect()
 
-stream = MyStreamer(APP_KEY, APP_SECRET, OAUTH_TOKEN, OAUTH_TOKEN_SECRET)
-
-while True:
-    stream.statuses.filter(track='#copperglock')
+if __name__ == "__main__":
+    stream = MyStreamer(APP_KEY, APP_SECRET, OAUTH_TOKEN, OAUTH_TOKEN_SECRET)
+    while True:
+        stream.statuses.filter(track='#copperglock')
