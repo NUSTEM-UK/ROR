@@ -16,13 +16,13 @@ def searcher(tweet):
         #similars = set(tweetList).intersection(value)
         #matchLength = len(similars)
         #accuracy = matchLength/songLength
-        accuracy = fuzz.partial_ratio(tweet,value)
+        accuracy = fuzz.token_set_ratio(tweet,value)
         if accuracy > bestAccuracy:
             bestGuess = key
             bestAccuracy = accuracy
     return(bestGuess, bestAccuracy)
 
 if __name__ == "__main__":
-    tweet = "#nustem all i want christmas"
+    tweet = "#nustem christmas"
     a,b = searcher(tweet)
     print(a,b)
