@@ -1,6 +1,7 @@
 #from jinglefilewalker import *
 from rttllist import *
 # dependency pip3 install fuzzywuzzy
+# pip3 install python-Levenshtein - not dependent but removes an annoying warning
 from fuzzywuzzy import fuzz
 from fuzzywuzzy import process
 
