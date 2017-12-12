@@ -15,8 +15,8 @@ from gpiozero.pins.pigpio import PiGPIOFactory
 # (allows more servos to be controlled)
 Device.pin_factory = PiGPIOFactory()
 
-myservo = [Servo(27), Servo(22), Servo(10), Servo(11),
-           Servo(6), Servo(13), Servo(19), Servo(26)]
+myservo = [Servo(27), Servo(22), Servo(5), Servo(6),
+           Servo(13), Servo(19), Servo(26), Servo(21)]
 
 
 def on_connect(self, client, userdata, rc):
@@ -34,6 +34,8 @@ def on_message(client, userdata, msg):
         if beat == "1":
             print(i, ": BONG!")
             myservo[i].max()
+            sleep(0.15)
+            myservo[i].min()
         else:
             print(i, ": PISH!")
             myservo[i].min()
