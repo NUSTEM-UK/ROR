@@ -14,7 +14,7 @@ class MyStreamer(TwythonStreamer):
 
         # Want to stop trying to get data because of the error?
         # Uncomment the next line!
-        self.disconnect()
+        # self.disconnect()
 
 if __name__ == "__main__":
     stream = MyStreamer(APP_KEY, APP_SECRET, OAUTH_TOKEN, OAUTH_TOKEN_SECRET)
