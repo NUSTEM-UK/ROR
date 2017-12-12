@@ -59,8 +59,8 @@ class RepeatedTimer(object):
 
 
 mqttc = mqtt.Client()
-# mqtt_server = "10.0.1.5"
-mqtt_server = "127.0.0.1"
+mqtt_server = "10.0.1.5"
+# mqtt_server = "127.0.0.1"
 
 def change_pixel(x, y):
     if beat_set.get_pixel(x, y) == 'white':
@@ -109,6 +109,7 @@ def playBeat():
     playset(curStateString)
    
     # Return column to previous colour
+    # This may happen rather too rapidly. But it also sometimes barfs.
     for row in range(num_channels):
         if curState[row] == 0:
             beat_set.set_pixel(currentBeat, row, "white")
