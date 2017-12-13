@@ -22,9 +22,11 @@ def searcher(tweet):
         if accuracy > bestAccuracy:
             bestGuess = key
             bestAccuracy = accuracy
-    return(bestGuess, bestAccuracy)
+            bestRTTTL = value
+    return(bestGuess, bestAccuracy, bestRTTTL)
 
 if __name__ == "__main__":
     tweet = "#nustem walking"
-    a,b = searcher(tweet)
+    a,b,c = searcher(tweet)
     print(a,b)
+    print(c)
