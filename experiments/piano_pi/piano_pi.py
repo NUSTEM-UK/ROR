@@ -189,8 +189,10 @@ channeldict = {"C":0, "C#":0, "D":1, "D#":1, "E":2, "F":3, "F#":3, "G":4, "G#":4
 # tune = RTTTL(songdict["So This is Christmas"])
 # tune = RTTTL(songdict["Have Yourself a Merry Little Christmas"])
 # tune = RTTTL(songdict["So Here it is Merry Christmas"])
+# tune = RTTTL(songdict["The Prisoner"])
 
-string = "TakeACha:d=8,o=6,b=100:16e,16e,d#,4f#,4b.,b,g#,4f#,4d#.,16d#,16d#,e,4f#,4f#.,16e,16d#,e,4f#,4f#.,f#,e,4f#,4a#,a#,a#,d#,e,4f#,4f#.,d#,e,4f#,4a#,a#,a#,d#,e,4d#,2d#"
+
+string = "Wonderfu:d=4,o=6,b=160:16b5,16p,8b5,8p,8c_,8d_.,1p,p,16p,16b5,16p,8b5,8p,8c_,8d_.,1p,p,16p,16b5,16p,8b5,8p,8c_,8d_,1p,p,8p,16b5,16p,8b5,8p,8c_,8d_.,2p,p,8p,16p,d_,p,c_.,8p,e.,8p,d_,8p,8d_,f_,8e,8d_,8b5,8p,8b5,8p,2b5,2p,d_,p,c_.,8p,e.,8p,d_,8p,8d_,f_,8e,8d_,8b5,8p,8b5,8p,2b5"
 tune = RTTTL(string)
 
 

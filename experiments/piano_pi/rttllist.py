@@ -41,6 +41,6 @@ songdict = {
     "So This is Christmas":"SoThisIs:d=8,o=5,b=80:32p,a,b,c#6,a,e,4p,e,a,b,c#6,4b,4p,16f#,b,c#6,d6,c#6,4b,16e,16e,c#6,e6,16c#6,16b,4a",
     "Have Yourself a Merry Little Christmas":"HaveYour:d=16,o=5,b=100:b,8c,8e.,4g.,b,8c6,8g,4f,p,8e,d,4c,c,4d.,8p,b,8c,8e,4g.,b,8c.6,2g,4p,4e,4g,4c6,d6,8e.6,8d.6,8c6,8b,8a,4g,e,4f,2e,p,8f,g,d,d,8c,8d,a,4c.,4e,4g,b,8c.6,8g,4f.,p,8e,d,8c,d,e,8d.,8e,8p,c,8e,4g.,b,8c6,2g,4p,4e,4g,4c6,4d6,8d.6,c6,p,8b,a,4g#.,8b.,b,2c.6,p",
     "So Here it is Merry Christmas":"SoHereIt:d=4,o=5,b=180:d,e,f#,2g,8a.,b,a,f#.,d,8b.4,f.,d,8c.,a#4,1d,8p,2g,8a.,b,a,f#,d.,b4,f,f,f,f,f.,16e,16d#,d.,16e,16f,1f#",
-
+    "The Prisoner":"ThePriso:d=4,o=6,b=160:8c#7,8b,2c#.,8b,8a,2b.,8a,g#,8a#,8f#,8d,8c#,f#,d,8c#,8f#,8d,8c#,f#,8c#,8b,c#7,b,a,g#,c#,8e,8c#,d#,8a,8b,c#7,b,a,g#,c#,8e,8c#,8d#,8a,b,2c#7,b,8a,8g#,c#,8e,8c#,d#,8e,8f#,g#.,g#.,g#,8g#,8p,8g#,8f#,8g#,8p,8d#,8c#,8d#,8p,8g#,8f#,8g#,8p,8g#7,8f#7,g#7,8f#7,8e7,f#7,8e7,8d#7,8c#7,8g#,f#,c#,8g#7,8f#7,g#7,8f#7,8e7,f#7,8e7,8d#7,8c#7,8e,b5,2a5"
 }
 
