@@ -167,14 +167,6 @@ def on_message(client, userdata, msg):
 
 load_samples(patches[patch_index])
 
-
-# tune = RTTTL(songdict['Oh little star of bethlehem'])
-# tune = RTTTL(songdict['Jingle Bells'])
-# tune = RTTTL(songdict['Frosty the snowman'])
-# tune = RTTTL(songdict["I'm dreaming of a white christmas"])
-# tune = RTTTL(songdict['Take On Me'])
-# tune = RTTTL(songdict['Airwolf Theme'])
-
 client = mqtt.Client()
 client.on_connect = on_connect
 client.on_message = on_message
