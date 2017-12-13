@@ -57,8 +57,9 @@ if len(patches) == 0:
 
 # Display-o-Tron setup
 lcd.clear()
-lcd.contrast(30)
+# lcd.set_contrast(30)
 lcd.write("SYSTEM START")
+backlight.graph_off()
 
 
 def natural_sort_key(s, _nsre=re.compile('([0-9]+)')):
@@ -149,11 +150,11 @@ def playset(beatset):
 def on_message(client, userdata, msg):
     """Handle incoming messages."""
     # print("Topic:", msg.topic + '  :  Message: ' + msg.payload)
-    print(msg.topic, msg.payload)
+    print(str(msg.topic), str(msg.payload))
     
-    if msg.topic == "orchestra/cue":
-        lcd.set_cursor_postition(0,0)
-        lcd.write("Now playing:")
+    if str(msg.topic) == "orchestra/cue":
+        lcd.set_cursor_position(0,0)
+        lcd.write("Now playing:".ljust(16))
 
         """Handle incoming playback cue."""
         notedict = {"C":36, "C#":37, "D":38, "D#":39, "E":40, "F":41, "F#":42, "G":43, "G#":44, "A":45, "A#":46, "B":47}
@@ -179,15 +180,18 @@ def on_message(client, userdata, msg):
         sleep(0.3)
         print(">>> Playback complete!")
         lcd.clear()
-    
-    elif msg.topic == "orchestra/handle":
-        lcd.set_cursor_position(0,2)
-        lcd.write("For: " + msg.payload[:12])
-        
-    elif msg.topic == "orchestra/song":
-        lcd.set_cursor_position(0,1)
-        lcd.write(msg.payload[:16])
+        lcd.set_cursor_position(0,0)
+        lcd.write("POISED READY")
 
+    elif str(msg.topic) == "orchestra/song":
+        print("Song title received")
+        lcd.set_cursor_position(0,1)
+        lcd.write(str(msg.payload[:16]).ljust(16))
+
+    elif str(msg.topic) == "orchestra/handle":
+        lcd.set_cursor_position(0,2)
+        lcd.write("For: " + str(msg.payload[:11]).ljust(11))
+   
     else:
         print("Well, that didn't work")
 
