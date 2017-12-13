@@ -4,8 +4,12 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
+A4	../controller-ringtone/controller-ringtone.py	/^A4 = 440$/;"	kind:variable	line:36
+A4	../experiments/piano_pi/piano_pi.py	/^A4 = 440$/;"	kind:variable	line:33
 ALL	../legacy/trellis/instruments.py	/^ALL = ("00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11",$/;"	kind:variable	line:40
 ALL	../legacy/trellis/mod_orchestra.py	/^from instruments import instruments, ALL$/;"	kind:namespace	line:16
+APP_KEY	../glock/twitcredsfile.py	/^APP_KEY = '???'$/;"	kind:variable	line:1
+APP_SECRET	../glock/twitcredsfile.py	/^APP_SECRET = '???'$/;"	kind:variable	line:2
 Adafruit_Trellis	../legacy/trellis/RobotOrchestra-Trellis.py	/^import Adafruit_Trellis$/;"	kind:namespace	line:17
 App	../controller/ror.py	/^from guizero import App, Waffle, Text, Box, PushButton$/;"	kind:namespace	line:7
 App	../experiments/guizero_layout01.py	/^from guizero import App, Waffle, PushButton, Box$/;"	kind:namespace	line:1
@@ -14,30 +18,54 @@ App	../experiments/waffle01.py	/^from guizero import App, Waffle$/;"	kind:namesp
 App	../experiments/waffle02.py	/^from guizero import App, Waffle$/;"	kind:namespace	line:16
 App	../experiments/waffle03.py	/^from guizero import App, Waffle$/;"	kind:namespace	line:3
 App	../experiments/waffle04.py	/^from guizero import App, Waffle$/;"	kind:namespace	line:3
+BANK	../controller-ringtone/controller-ringtone.py	/^BANK = os.path.join(os.path.dirname(__file__), "sounds")$/;"	kind:variable	line:26
+BANK	../experiments/piano_pi/piano_pi.py	/^BANK = os.path.join(os.path.dirname(__file__), "..\/piano_pi\/sounds")$/;"	kind:variable	line:23
+BANK	../experiments/sound02.py	/^BANK = os.path.join(os.path.dirname(__file__), "..\/piano_pi\/sounds")$/;"	kind:variable	line:20
 Box	../controller/ror.py	/^from guizero import App, Waffle, Text, Box, PushButton$/;"	kind:namespace	line:7
 Box	../experiments/guizero_layout01.py	/^from guizero import App, Waffle, PushButton, Box$/;"	kind:namespace	line:1
 Button	../experiments/tkinter01.py	/^from tkinter import Tk, Label, Button$/;"	kind:namespace	line:1
 Button	../legacy/trellis/RobotOrchestra-Trellis.py	/^from gpiozero import Button$/;"	kind:namespace	line:20
+C0	../controller-ringtone/controller-ringtone.py	/^C0 = A4*pow(2, -4.75)$/;"	kind:variable	line:37
+C0	../experiments/piano_pi/piano_pi.py	/^C0 = A4*pow(2, -4.75)$/;"	kind:variable	line:34
+Device	../player_pi/player_pi.py	/^from gpiozero import Device, Servo$/;"	kind:namespace	line:11
+FILETYPES	../controller-ringtone/controller-ringtone.py	/^FILETYPES = ['*.wav', '*.ogg']$/;"	kind:variable	line:29
+FILETYPES	../experiments/piano_pi/piano_pi.py	/^FILETYPES = ['*.wav', '*.ogg']$/;"	kind:variable	line:26
+FILETYPES	../experiments/sound02.py	/^FILETYPES = ['*.wav', '*.ogg']$/;"	kind:variable	line:23
 Frame	../experiments/guizero_test01.py	/^from tkinter import Frame$/;"	kind:namespace	line:13
 I2C_BUS	../legacy/trellis/RobotOrchestra-Trellis.py	/^I2C_BUS = 1$/;"	kind:variable	line:91
 Label	../experiments/tkinter01.py	/^from tkinter import Tk, Label, Button$/;"	kind:namespace	line:1
 MyFirstGUI	../experiments/tkinter01.py	/^class MyFirstGUI:$/;"	kind:class	line:3
+MyStreamer	../glock/glocktwit.py	/^class MyStreamer(TwythonStreamer):$/;"	kind:class	line:5
+NOTE	../controller-ringtone/rtttl.py	/^NOTE = [$/;"	kind:variable	line:10
+NOTE	../experiments/piano_pi/rtttl.py	/^NOTE = [$/;"	kind:variable	line:10
+NOTE_OFFSET	../controller-ringtone/controller-ringtone.py	/^NOTE_OFFSET = 0$/;"	kind:variable	line:28
+NOTE_OFFSET	../experiments/piano_pi/piano_pi.py	/^NOTE_OFFSET = 0$/;"	kind:variable	line:25
+NOTE_OFFSET	../experiments/sound02.py	/^NOTE_OFFSET = 3$/;"	kind:variable	line:22
 NUMTRELLIS	../legacy/trellis/RobotOrchestra-Trellis.py	/^NUMTRELLIS = 8$/;"	kind:variable	line:80
+OAUTH_TOKEN	../glock/twitcredsfile.py	/^OAUTH_TOKEN = '???'$/;"	kind:variable	line:3
+OAUTH_TOKEN_SECRET	../glock/twitcredsfile.py	/^OAUTH_TOKEN_SECRET = '???'/;"	kind:variable	line:4
 PLAYERS	../legacy/trellis/instruments.py	/^PLAYERS = {"ZERO": ("00",),$/;"	kind:variable	line:50
+PiGPIOFactory	../player_pi/player_pi.py	/^from gpiozero.pins.pigpio import PiGPIOFactory$/;"	kind:namespace	line:12
 PushButton	../controller/ror.py	/^from guizero import App, Waffle, Text, Box, PushButton$/;"	kind:namespace	line:7
 PushButton	../experiments/guizero_layout01.py	/^from guizero import App, Waffle, PushButton, Box$/;"	kind:namespace	line:1
+RTTTL	../controller-ringtone/controller-ringtone.py	/^from rtttl import RTTTL$/;"	kind:namespace	line:13
+RTTTL	../controller-ringtone/rtttl.py	/^class RTTTL:$/;"	kind:class	line:30
+RTTTL	../experiments/piano_pi/piano_pi.py	/^from rtttl import RTTTL$/;"	kind:namespace	line:13
+RTTTL	../experiments/piano_pi/rtttl.py	/^class RTTTL:$/;"	kind:class	line:30
 RepeatedTimer	../controller/ror.py	/^class RepeatedTimer(object):$/;"	kind:class	line:27
 RepeatedTimer	../experiments/waffle04.py	/^class RepeatedTimer(object):$/;"	kind:class	line:25
 RepeatedTimer	../legacy/trellis/RobotOrchestra-Trellis.py	/^class RepeatedTimer(object):$/;"	kind:class	line:31
 RobotOrchestra-Trellis.py	../legacy/trellis/RobotOrchestra-Trellis.py	1;"	kind:file	line:1
 Servo	../experiments/servo01.py	/^from gpiozero import Servo$/;"	kind:namespace	line:1
 Servo	../experiments/servo02.py	/^from gpiozero import Servo$/;"	kind:namespace	line:11
-Servo	../player_pi/player_pi.py	/^from gpiozero import Servo$/;"	kind:namespace	line:10
+Servo	../player_pi/player_pi.py	/^from gpiozero import Device, Servo$/;"	kind:namespace	line:11
 Text	../controller/ror.py	/^from guizero import App, Waffle, Text, Box, PushButton$/;"	kind:namespace	line:7
+Timer	../controller-ringtone/controller-ringtone.py	/^from threading import Timer$/;"	kind:namespace	line:15
 Timer	../controller/ror.py	/^from threading import Timer$/;"	kind:namespace	line:5
 Timer	../experiments/waffle04.py	/^from threading import Timer$/;"	kind:namespace	line:5
 Timer	../legacy/trellis/RobotOrchestra-Trellis.py	/^from threading import Timer$/;"	kind:namespace	line:16
 Tk	../experiments/tkinter01.py	/^from tkinter import Tk, Label, Button$/;"	kind:namespace	line:1
+TwythonStreamer	../glock/glocktwit.py	/^from twython import TwythonStreamer$/;"	kind:namespace	line:2
 Waffle	../controller/ror.py	/^from guizero import App, Waffle, Text, Box, PushButton$/;"	kind:namespace	line:7
 Waffle	../experiments/guizero_layout01.py	/^from guizero import App, Waffle, PushButton, Box$/;"	kind:namespace	line:1
 Waffle	../experiments/guizero_test01.py	/^from guizero import App, Waffle$/;"	kind:namespace	line:12
@@ -45,7 +73,9 @@ Waffle	../experiments/waffle01.py	/^from guizero import App, Waffle$/;"	kind:nam
 Waffle	../experiments/waffle02.py	/^from guizero import App, Waffle$/;"	kind:namespace	line:16
 Waffle	../experiments/waffle03.py	/^from guizero import App, Waffle$/;"	kind:namespace	line:3
 Waffle	../experiments/waffle04.py	/^from guizero import App, Waffle$/;"	kind:namespace	line:3
+__init__	../controller-ringtone/rtttl.py	/^    def __init__(self, tune):$/;"	kind:member	line:32
 __init__	../controller/ror.py	/^    def __init__(self, interval, function, *args):$/;"	kind:member	line:33
+__init__	../experiments/piano_pi/rtttl.py	/^    def __init__(self, tune):$/;"	kind:member	line:32
 __init__	../experiments/tkinter01.py	/^    def __init__(self, master):$/;"	kind:member	line:4
 __init__	../experiments/waffle04.py	/^    def __init__(self, interval, function, *args):$/;"	kind:member	line:31
 __init__	../legacy/trellis/RobotOrchestra-Trellis.py	/^    def __init__(self, interval, function, *args):$/;"	kind:member	line:37
@@ -77,10 +107,13 @@ change_pixel	../controller/ror.py	/^def change_pixel(x, y):$/;"	kind:function	li
 change_pixel	../experiments/waffle02.py	/^def change_pixel(x, y):$/;"	kind:function	line:18
 change_pixel	../experiments/waffle03.py	/^def change_pixel(x, y):$/;"	kind:function	line:5
 change_pixel	../experiments/waffle04.py	/^def change_pixel(x, y):$/;"	kind:function	line:8
+channeldict	../experiments/piano_pi/piano_pi.py	/^channeldict = {"C":0, "C#":0, "D":1, "D#":1, "E":2, "F":3, "F#":3, "G":4, "G#":4, "A":5, "A#":5, "B":6}$/;"	kind:variable	line:147
+client	../controller-ringtone/controller-ringtone.py	/^client = mqtt.Client()$/;"	kind:variable	line:170
 client	../experiments/player_pi_test.py	/^client = mqtt.Client()$/;"	kind:variable	line:23
 client	../network/mqttsub-announce.py	/^client = mqtt.Client()$/;"	kind:variable	line:20
-client	../network/mqttsub.py	/^client = mqtt.Client()$/;"	kind:variable	line:15
-client	../player_pi/player_pi.py	/^client = mqtt.Client()$/;"	kind:variable	line:34
+client	../network/mqttsub.py	/^client = mqtt.Client()$/;"	kind:variable	line:19
+client	../player_pi/player_pi.py	/^client = mqtt.Client()$/;"	kind:variable	line:43
+controller-ringtone.py	../controller-ringtone/controller-ringtone.py	1;"	kind:file	line:1
 currentBeat	../controller/ror.py	/^currentBeat = 0 # Keep track of which beat we're playing$/;"	kind:variable	line:17
 currentBeat	../experiments/waffle04.py	/^currentBeat = 0 # Keep track of which beat we're playing$/;"	kind:variable	line:20
 currentBeat	../legacy/trellis/RobotOrchestra-Trellis.py	/^currentBeat = 0  # Keep track of which beat we're playing.$/;"	kind:variable	line:23
@@ -91,15 +124,51 @@ dimension	../experiments/waffle03.py	/^dimension = 20$/;"	kind:variable	line:11
 dimension	../experiments/waffle04.py	/^dimension = 20$/;"	kind:variable	line:14
 do_nothing	../controller/ror.py	/^def do_nothing():$/;"	kind:function	line:125
 do_nothing	../experiments/guizero_layout01.py	/^def do_nothing():$/;"	kind:function	line:3
+exit	../controller-ringtone/controller-ringtone.py	/^from sys import exit$/;"	kind:namespace	line:12
+exit	../experiments/piano_pi/piano_pi.py	/^from sys import exit$/;"	kind:namespace	line:12
+exit	../experiments/sound02.py	/^from sys import exit$/;"	kind:namespace	line:13
 fasterButton	../controller/ror.py	/^def fasterButton():$/;"	kind:function	line:149
+filenames	../glock/jinglefilewalker.py	/^filenames = glob.glob('xmassongs\/*.bas')$/;"	kind:variable	line:3
+files	../controller-ringtone/controller-ringtone.py	/^files = []$/;"	kind:variable	line:31
+files	../experiments/piano_pi/piano_pi.py	/^files = []$/;"	kind:variable	line:28
+files	../experiments/sound02.py	/^files = []$/;"	kind:variable	line:25
 frame	../experiments/guizero_test01.py	/^frame = Frame(my_waffle, width=100, height=100)$/;"	kind:variable	line:33
+freq_to_note	../controller-ringtone/controller-ringtone.py	/^def freq_to_note(freq):$/;"	kind:function	line:111
+freq_to_note	../experiments/piano_pi/piano_pi.py	/^def freq_to_note(freq):$/;"	kind:function	line:103
+fuzz	../glock/songsearcher.py	/^from fuzzywuzzy import fuzz$/;"	kind:namespace	line:5
+glob	../controller-ringtone/controller-ringtone.py	/^import glob$/;"	kind:namespace	line:7
+glob	../experiments/piano_pi/piano_pi.py	/^import glob$/;"	kind:namespace	line:7
+glob	../experiments/sound02.py	/^import glob$/;"	kind:namespace	line:7
+glob	../glock/jinglefilewalker.py	/^import glob$/;"	kind:namespace	line:2
+glockenspiel.py	../glock/glockenspiel.py	1;"	kind:file	line:1
+glocktwit.py	../glock/glocktwit.py	1;"	kind:file	line:1
 greet	../experiments/tkinter01.py	/^    def greet(self):$/;"	kind:member	line:17
 guizero_layout01.py	../experiments/guizero_layout01.py	1;"	kind:file	line:1
 guizero_test01.py	../experiments/guizero_test01.py	1;"	kind:file	line:1
+handle_note	../controller-ringtone/controller-ringtone.py	/^def handle_note(channel, octave):$/;"	kind:function	line:73
+handle_note	../experiments/piano_pi/piano_pi.py	/^def handle_note(channel, octave):$/;"	kind:function	line:65
+handle_note	../experiments/sound02.py	/^def handle_note(channel, octave):$/;"	kind:function	line:57
+handle_octave_down	../controller-ringtone/controller-ringtone.py	/^def handle_octave_down():$/;"	kind:function	line:90
+handle_octave_down	../experiments/piano_pi/piano_pi.py	/^def handle_octave_down():$/;"	kind:function	line:82
+handle_octave_down	../experiments/sound02.py	/^def handle_octave_down():$/;"	kind:function	line:74
+handle_octave_up	../controller-ringtone/controller-ringtone.py	/^def handle_octave_up():$/;"	kind:function	line:83
+handle_octave_up	../experiments/piano_pi/piano_pi.py	/^def handle_octave_up():$/;"	kind:function	line:75
+handle_octave_up	../experiments/sound02.py	/^def handle_octave_up():$/;"	kind:function	line:67
+i	../glock/jinglefilewalker.py	/^        i = i[:-1]$/;"	kind:variable	line:14
+i	../glock/jinglefilewalker.py	/^    i = i.lower()$/;"	kind:variable	line:15
+i	../glock/jinglefilewalker.py	/^    i = i.replace('xmassongs\/',"")$/;"	kind:variable	line:11
+i	../glock/jinglefilewalker.py	/^    i = i.rstrip('.bas')$/;"	kind:variable	line:12
+install	../controller-ringtone/controller-ringtone.py	/^import paho.mqtt.client as mqtt # requires `pip install paho-mqtt`$/;"	kind:namespace	line:16
 install	../controller/ror.py	/^import paho.mqtt.client as mqtt # requires `pip install paho-mqtt`$/;"	kind:namespace	line:6
 instruments	../legacy/trellis/instruments.py	/^instruments = {"00": "skutter_18:FE:34:FD:91:AD",$/;"	kind:variable	line:3
 instruments	../legacy/trellis/mod_orchestra.py	/^from instruments import instruments, ALL$/;"	kind:namespace	line:16
 instruments.py	../legacy/trellis/instruments.py	1;"	kind:file	line:1
+jinglefilewalker.py	../glock/jinglefilewalker.py	1;"	kind:file	line:1
+load_samples	../controller-ringtone/controller-ringtone.py	/^def load_samples(patch):$/;"	kind:function	line:61
+load_samples	../experiments/piano_pi/piano_pi.py	/^def load_samples(patch):$/;"	kind:function	line:53
+load_samples	../experiments/sound02.py	/^def load_samples(patch):$/;"	kind:function	line:45
+log	../controller-ringtone/controller-ringtone.py	/^from math import log, pow$/;"	kind:namespace	line:19
+log	../experiments/piano_pi/piano_pi.py	/^from math import log, pow$/;"	kind:namespace	line:16
 matrix0	../legacy/trellis/RobotOrchestra-Trellis.py	/^matrix0 = Adafruit_Trellis.Adafruit_Trellis()$/;"	kind:variable	line:66
 matrix1	../legacy/trellis/RobotOrchestra-Trellis.py	/^matrix1 = Adafruit_Trellis.Adafruit_Trellis()$/;"	kind:variable	line:67
 matrix2	../legacy/trellis/RobotOrchestra-Trellis.py	/^matrix2 = Adafruit_Trellis.Adafruit_Trellis()$/;"	kind:variable	line:68
@@ -108,17 +177,21 @@ matrix4	../legacy/trellis/RobotOrchestra-Trellis.py	/^matrix4 = Adafruit_Trellis
 matrix5	../legacy/trellis/RobotOrchestra-Trellis.py	/^matrix5 = Adafruit_Trellis.Adafruit_Trellis()$/;"	kind:variable	line:71
 matrix6	../legacy/trellis/RobotOrchestra-Trellis.py	/^matrix6 = Adafruit_Trellis.Adafruit_Trellis()$/;"	kind:variable	line:72
 matrix7	../legacy/trellis/RobotOrchestra-Trellis.py	/^matrix7 = Adafruit_Trellis.Adafruit_Trellis()$/;"	kind:variable	line:73
+message	../controller-ringtone/controller-ringtone.py	/^def message(topic, payload):$/;"	kind:function	line:128
 message	../controller/ror.py	/^def message(topic, payload):$/;"	kind:function	line:72
 message	../legacy/trellis/mod_orchestra.py	/^def message(topic, payload):$/;"	kind:function	line:24
 mod_orchestra.py	../legacy/trellis/mod_orchestra.py	1;"	kind:file	line:1
+mqtt	../controller-ringtone/controller-ringtone.py	/^import paho.mqtt.client as mqtt # requires `pip install paho-mqtt`$/;"	kind:namespace	line:16
 mqtt	../controller/ror.py	/^import paho.mqtt.client as mqtt # requires `pip install paho-mqtt`$/;"	kind:namespace	line:6
 mqtt	../experiments/player_pi_test.py	/^import paho.mqtt.client as mqtt$/;"	kind:namespace	line:4
 mqtt	../legacy/trellis/mod_orchestra.py	/^import paho.mqtt.client as mqtt$/;"	kind:namespace	line:15
 mqtt	../network/mqttsub-announce.py	/^import paho.mqtt.client as mqtt$/;"	kind:namespace	line:7
 mqtt	../network/mqttsub.py	/^import paho.mqtt.client as mqtt$/;"	kind:namespace	line:2
-mqtt	../player_pi/player_pi.py	/^import paho.mqtt.client as mqtt$/;"	kind:namespace	line:8
+mqtt	../player_pi/player_pi.py	/^import paho.mqtt.client as mqtt$/;"	kind:namespace	line:9
+mqtt_server	../controller-ringtone/controller-ringtone.py	/^mqtt_server = "10.0.1.5"$/;"	kind:variable	line:42
 mqtt_server	../controller/ror.py	/^mqtt_server = "10.0.1.5"$/;"	kind:variable	line:62
 mqtt_server	../legacy/trellis/mod_orchestra.py	/^mqtt_server = "10.0.1.5"$/;"	kind:variable	line:20
+mqttc	../controller-ringtone/controller-ringtone.py	/^mqttc = mqtt.Client()$/;"	kind:variable	line:40
 mqttc	../controller/ror.py	/^mqttc = mqtt.Client()$/;"	kind:variable	line:61
 mqttc	../legacy/trellis/mod_orchestra.py	/^mqttc = mqtt.Client()$/;"	kind:variable	line:18
 mqttsub-announce.py	../network/mqttsub-announce.py	1;"	kind:file	line:1
@@ -132,7 +205,19 @@ my_waffle	../experiments/guizero_test01.py	/^my_waffle = Waffle(App, remember=Tr
 my_waffle	../experiments/waffle01.py	/^my_waffle = Waffle(app, remember=True)$/;"	kind:variable	line:11
 myarray	../experiments/array.py	/^myarray = ["Thing", "and", "another", "thingy"]$/;"	kind:variable	line:1
 myservo	../experiments/servo02.py	/^myservo = [Servo(27), Servo(22), Servo(10), Servo(11),$/;"	kind:variable	line:17
-myservo	../player_pi/player_pi.py	/^myservo = [Servo(27), Servo(22), Servo(10), Servo(11),$/;"	kind:variable	line:12
+myservo	../player_pi/player_pi.py	/^myservo = [Servo(27), Servo(22), Servo(5), Servo(6),$/;"	kind:variable	line:18
+name	../controller-ringtone/controller-ringtone.py	/^name = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"]$/;"	kind:variable	line:38
+name	../experiments/piano_pi/piano_pi.py	/^name = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"]$/;"	kind:variable	line:35
+namestore	../glock/jinglefilewalker.py	/^    namestore = i.replace('xmassongs\/',"")$/;"	kind:variable	line:10
+natural_sort_key	../controller-ringtone/controller-ringtone.py	/^def natural_sort_key(s, _nsre=re.compile('([0-9]+)')):$/;"	kind:function	line:57
+natural_sort_key	../experiments/piano_pi/piano_pi.py	/^def natural_sort_key(s, _nsre=re.compile('([0-9]+)')):$/;"	kind:function	line:49
+natural_sort_key	../experiments/sound02.py	/^def natural_sort_key(s, _nsre=re.compile('([0-9]+)')):$/;"	kind:function	line:41
+next_char	../controller-ringtone/rtttl.py	/^    def next_char(self):$/;"	kind:member	line:61
+next_char	../experiments/piano_pi/rtttl.py	/^    def next_char(self):$/;"	kind:member	line:61
+notedict	../experiments/piano_pi/piano_pi.py	/^notedict = {"C":36, "C#":37, "D":38, "D#":39, "E":40, "F":41, "F#":42, "G":43, "G#":44, "A":45, "A#":46, "B":47}$/;"	kind:variable	line:146
+notes	../controller-ringtone/rtttl.py	/^    def notes(self):$/;"	kind:member	line:70
+notes	../experiments/piano_pi/rtttl.py	/^    def notes(self):$/;"	kind:member	line:70
+np	../controller-ringtone/controller-ringtone.py	/^import numpy as np$/;"	kind:namespace	line:17
 np	../controller/ror.py	/^import numpy as np$/;"	kind:namespace	line:8
 np	../experiments/waffle04.py	/^import numpy as np$/;"	kind:namespace	line:6
 np	../legacy/trellis/RobotOrchestra-Trellis.py	/^import numpy as np$/;"	kind:namespace	line:18
@@ -143,44 +228,96 @@ num_beats	../experiments/waffle04.py	/^num_beats = 16$/;"	kind:variable	line:17
 num_channels	../controller/ror.py	/^num_channels = 8$/;"	kind:variable	line:11
 num_channels	../experiments/waffle03.py	/^num_channels = 8$/;"	kind:variable	line:15
 num_channels	../experiments/waffle04.py	/^num_channels = 8$/;"	kind:variable	line:18
+octave	../controller-ringtone/controller-ringtone.py	/^octave = 0$/;"	kind:variable	line:32
+octave	../experiments/piano_pi/piano_pi.py	/^octave = 0$/;"	kind:variable	line:29
+octave	../experiments/sound02.py	/^octave = 0$/;"	kind:variable	line:26
+octaves	../controller-ringtone/controller-ringtone.py	/^octaves = 0$/;"	kind:variable	line:33
+octaves	../experiments/piano_pi/piano_pi.py	/^octaves = 0$/;"	kind:variable	line:30
+octaves	../experiments/sound02.py	/^octaves = 0$/;"	kind:variable	line:27
+on_connect	../controller-ringtone/controller-ringtone.py	/^def on_connect(self, client, userdata, rc):$/;"	kind:function	line:123
 on_connect	../experiments/player_pi_test.py	/^def on_connect(client, userdata, rc):$/;"	kind:function	line:7
 on_connect	../network/mqttsub-announce.py	/^def on_connect(client, userdata, rc):$/;"	kind:function	line:10
-on_connect	../network/mqttsub.py	/^def on_connect(client, userdata, rc):$/;"	kind:function	line:5
-on_connect	../player_pi/player_pi.py	/^def on_connect(client, userdata, rc):$/;"	kind:function	line:16
+on_connect	../network/mqttsub.py	/^def on_connect(self, client, userdata, rc):$/;"	kind:function	line:5
+on_connect	../player_pi/player_pi.py	/^def on_connect(self, client, userdata, rc):$/;"	kind:function	line:22
+on_error	../glock/glocktwit.py	/^    def on_error(self, status_code, data):$/;"	kind:member	line:12
+on_message	../controller-ringtone/controller-ringtone.py	/^def on_message(client, userdata, msg):$/;"	kind:function	line:140
 on_message	../experiments/player_pi_test.py	/^def on_message(client, userdata, msg):$/;"	kind:function	line:13
 on_message	../network/mqttsub-announce.py	/^def on_message(client, userdata, msg):$/;"	kind:function	line:16
-on_message	../network/mqttsub.py	/^def on_message(client, userdata, msg):$/;"	kind:function	line:11
-on_message	../player_pi/player_pi.py	/^def on_message(client, userdata, msg):$/;"	kind:function	line:22
+on_message	../network/mqttsub.py	/^def on_message(client, userdata, msg):$/;"	kind:function	line:13
+on_message	../player_pi/player_pi.py	/^def on_message(client, userdata, msg):$/;"	kind:function	line:28
+on_success	../glock/glocktwit.py	/^    def on_success(self, data):$/;"	kind:member	line:6
+os	../controller-ringtone/controller-ringtone.py	/^import os$/;"	kind:namespace	line:8
+os	../experiments/piano_pi/piano_pi.py	/^import os$/;"	kind:namespace	line:8
+os	../experiments/sound02.py	/^import os$/;"	kind:namespace	line:8
 padding	../controller/ror.py	/^padding = 10 # Sides of window. I think$/;"	kind:variable	line:13
 padding	../experiments/waffle03.py	/^padding = 20$/;"	kind:variable	line:12
 padding	../experiments/waffle04.py	/^padding = 20$/;"	kind:variable	line:15
+paho	../controller-ringtone/controller-ringtone.py	/^import paho.mqtt.client as mqtt # requires `pip install paho-mqtt`$/;"	kind:namespace	line:16
 paho	../controller/ror.py	/^import paho.mqtt.client as mqtt # requires `pip install paho-mqtt`$/;"	kind:namespace	line:6
 paho	../experiments/player_pi_test.py	/^import paho.mqtt.client as mqtt$/;"	kind:namespace	line:4
 paho	../legacy/trellis/mod_orchestra.py	/^import paho.mqtt.client as mqtt$/;"	kind:namespace	line:15
 paho	../network/mqttsub-announce.py	/^import paho.mqtt.client as mqtt$/;"	kind:namespace	line:7
 paho	../network/mqttsub.py	/^import paho.mqtt.client as mqtt$/;"	kind:namespace	line:2
-paho	../player_pi/player_pi.py	/^import paho.mqtt.client as mqtt$/;"	kind:namespace	line:8
+paho	../player_pi/player_pi.py	/^import paho.mqtt.client as mqtt$/;"	kind:namespace	line:9
+parse_defaults	../controller-ringtone/rtttl.py	/^    def parse_defaults(self, defaults):$/;"	kind:member	line:40
+parse_defaults	../experiments/piano_pi/rtttl.py	/^    def parse_defaults(self, defaults):$/;"	kind:member	line:40
+patch_index	../controller-ringtone/controller-ringtone.py	/^patch_index = 0$/;"	kind:variable	line:51
+patch_index	../experiments/piano_pi/piano_pi.py	/^patch_index = 0$/;"	kind:variable	line:43
+patch_index	../experiments/sound02.py	/^patch_index = 0$/;"	kind:variable	line:35
+patches	../controller-ringtone/controller-ringtone.py	/^patches = glob.glob(os.path.join(BANK, '*'))$/;"	kind:variable	line:49
+patches	../experiments/piano_pi/piano_pi.py	/^patches = glob.glob(os.path.join(BANK, '*'))$/;"	kind:variable	line:41
+patches	../experiments/sound02.py	/^patches = glob.glob(os.path.join(BANK, '*'))$/;"	kind:variable	line:33
+piano_pi.py	../experiments/piano_pi/piano_pi.py	1;"	kind:file	line:1
+pip	../controller-ringtone/controller-ringtone.py	/^import paho.mqtt.client as mqtt # requires `pip install paho-mqtt`$/;"	kind:namespace	line:16
 pip	../controller/ror.py	/^import paho.mqtt.client as mqtt # requires `pip install paho-mqtt`$/;"	kind:namespace	line:6
 play	../legacy/trellis/mod_orchestra.py	/^def play(robots):$/;"	kind:function	line:62
 playBeat	../controller/ror.py	/^def playBeat():$/;"	kind:function	line:85
 playBeat	../experiments/waffle04.py	/^def playBeat():$/;"	kind:function	line:58
 playBeat	../legacy/trellis/RobotOrchestra-Trellis.py	/^def playBeat():$/;"	kind:function	line:133
+play_beats	../experiments/piano_pi/piano_pi.py	/^        play_beats = list("00000000")$/;"	kind:variable	line:161
 player_pi.py	../player_pi/player_pi.py	1;"	kind:file	line:1
 player_pi_test.py	../experiments/player_pi_test.py	1;"	kind:file	line:1
+playset	../controller-ringtone/controller-ringtone.py	/^def playset(beatset):$/;"	kind:function	line:136
 playset	../controller/ror.py	/^def playset(beatset):$/;"	kind:function	line:80
 playset	../legacy/trellis/RobotOrchestra-Trellis.py	/^from mod_orchestra import playset$/;"	kind:namespace	line:19
 playset	../legacy/trellis/mod_orchestra.py	/^def playset(beatset):$/;"	kind:function	line:69
+pow	../controller-ringtone/controller-ringtone.py	/^from math import log, pow$/;"	kind:namespace	line:19
+pow	../experiments/piano_pi/piano_pi.py	/^from math import log, pow$/;"	kind:namespace	line:16
+process	../glock/songsearcher.py	/^from fuzzywuzzy import process$/;"	kind:namespace	line:6
+pygame	../controller-ringtone/controller-ringtone.py	/^import pygame$/;"	kind:namespace	line:10
+pygame	../experiments/piano_pi/piano_pi.py	/^import pygame$/;"	kind:namespace	line:10
+pygame	../experiments/sound01.py	/^import pygame$/;"	kind:namespace	line:7
+pygame	../experiments/sound02.py	/^import pygame$/;"	kind:namespace	line:10
+re	../controller-ringtone/controller-ringtone.py	/^import re$/;"	kind:namespace	line:9
+re	../experiments/piano_pi/piano_pi.py	/^import re$/;"	kind:namespace	line:9
+re	../experiments/sound02.py	/^import re$/;"	kind:namespace	line:9
+requires	../controller-ringtone/controller-ringtone.py	/^import paho.mqtt.client as mqtt # requires `pip install paho-mqtt`$/;"	kind:namespace	line:16
 requires	../controller/ror.py	/^import paho.mqtt.client as mqtt # requires `pip install paho-mqtt`$/;"	kind:namespace	line:6
 root	../experiments/tkinter01.py	/^root = Tk()$/;"	kind:variable	line:20
 ror.py	../controller/ror.py	1;"	kind:file	line:1
 rt	../controller/ror.py	/^    rt = RepeatedTimer(bpm, playBeat)$/;"	kind:variable	line:190
 rt	../experiments/waffle04.py	/^rt = RepeatedTimer(bpm, playBeat)$/;"	kind:variable	line:84
 rt	../legacy/trellis/RobotOrchestra-Trellis.py	/^rt = RepeatedTimer(bpm, playBeat)$/;"	kind:variable	line:191
+rttllist.py	../controller-ringtone/rttllist.py	1;"	kind:file	line:1
+rttllist.py	../experiments/piano_pi/rttllist.py	1;"	kind:file	line:1
+rttllist.py	../glock/rttllist.py	1;"	kind:file	line:1
+rtttl.py	../controller-ringtone/rtttl.py	1;"	kind:file	line:1
+rtttl.py	../experiments/piano_pi/rtttl.py	1;"	kind:file	line:1
 running	../controller/ror.py	/^running = True$/;"	kind:variable	line:25
 running	../experiments/waffle04.py	/^running = True$/;"	kind:variable	line:23
 running	../legacy/trellis/RobotOrchestra-Trellis.py	/^                running = False$/;"	kind:variable	line:220
 running	../legacy/trellis/RobotOrchestra-Trellis.py	/^                running = True$/;"	kind:variable	line:225
 running	../legacy/trellis/RobotOrchestra-Trellis.py	/^running = True$/;"	kind:variable	line:28
+samples	../controller-ringtone/controller-ringtone.py	/^samples = []$/;"	kind:variable	line:30
+samples	../experiments/piano_pi/piano_pi.py	/^samples = []$/;"	kind:variable	line:27
+samples	../experiments/sound02.py	/^samples = []$/;"	kind:variable	line:24
+scale_down	../controller-ringtone/controller-ringtone.py	/^def scale_down(notes, delay):$/;"	kind:function	line:104
+scale_down	../experiments/piano_pi/piano_pi.py	/^def scale_down(notes, delay):$/;"	kind:function	line:96
+scale_down	../experiments/sound02.py	/^def scale_down(notes, delay):$/;"	kind:function	line:88
+scale_up	../controller-ringtone/controller-ringtone.py	/^def scale_up(notes, delay):$/;"	kind:function	line:97
+scale_up	../experiments/piano_pi/piano_pi.py	/^def scale_up(notes, delay):$/;"	kind:function	line:89
+scale_up	../experiments/sound02.py	/^def scale_up(notes, delay):$/;"	kind:function	line:81
+searcher	../glock/songsearcher.py	/^def searcher(tweet):$/;"	kind:function	line:8
 send_beats	../legacy/trellis/mod_orchestra.py	/^def send_beats(robots, beat_pattern):$/;"	kind:function	line:54
 servo00	../experiments/servo01.py	/^servo00 = Servo(27)$/;"	kind:variable	line:4
 servo01	../experiments/servo01.py	/^servo01 = Servo(22)$/;"	kind:variable	line:5
@@ -190,10 +327,29 @@ servo02.py	../experiments/servo02.py	1;"	kind:file	line:1
 servo03	../experiments/servo01.py	/^servo03 = Servo(11)$/;"	kind:variable	line:7
 set_active	../legacy/trellis/mod_orchestra.py	/^def set_active(robots):$/;"	kind:function	line:40
 set_inactive	../legacy/trellis/mod_orchestra.py	/^def set_inactive(robots):$/;"	kind:function	line:47
+signal	../experiments/sound01.py	/^import signal$/;"	kind:namespace	line:8
+signal	../experiments/sound02.py	/^import signal$/;"	kind:namespace	line:11
+sleep	../controller-ringtone/controller-ringtone.py	/^from time import sleep$/;"	kind:namespace	line:11
+sleep	../experiments/piano_pi/piano_pi.py	/^from time import sleep$/;"	kind:namespace	line:11
 sleep	../experiments/servo01.py	/^from time import sleep$/;"	kind:namespace	line:2
 sleep	../experiments/servo02.py	/^from time import sleep$/;"	kind:namespace	line:10
-sleep	../player_pi/player_pi.py	/^from time import sleep$/;"	kind:namespace	line:9
+sleep	../experiments/sound01.py	/^from time import sleep$/;"	kind:namespace	line:9
+sleep	../experiments/sound02.py	/^from time import sleep$/;"	kind:namespace	line:12
+sleep	../player_pi/player_pi.py	/^from time import sleep$/;"	kind:namespace	line:10
 slowerButton	../controller/ror.py	/^def slowerButton():$/;"	kind:function	line:160
+songdict	../controller-ringtone/controller-ringtone.py	/^from rttllist import songdict$/;"	kind:namespace	line:14
+songdict	../controller-ringtone/rttllist.py	/^songdict = {$/;"	kind:variable	line:1
+songdict	../experiments/piano_pi/piano_pi.py	/^from rttllist import songdict$/;"	kind:namespace	line:14
+songdict	../experiments/piano_pi/rttllist.py	/^songdict = {$/;"	kind:variable	line:1
+songdict	../glock/jinglefilewalker.py	/^songdict ={}$/;"	kind:variable	line:5
+songdict	../glock/rttllist.py	/^songdict = {$/;"	kind:variable	line:1
+songs.py	../controller-ringtone/sounds/songs.py	1;"	kind:file	line:1
+songs.py	../experiments/piano_pi/sounds/songs.py	1;"	kind:file	line:1
+songsearcher.py	../glock/songsearcher.py	1;"	kind:file	line:1
+sound01	../experiments/sound01.py	/^sound01 = pygame.mixer.Sound("..\/piano_pi\/sounds\/drums\/smash.wav")$/;"	kind:variable	line:14
+sound01.py	../experiments/sound01.py	1;"	kind:file	line:1
+sound02	../experiments/sound01.py	/^sound02 = pygame.mixer.Sound("..\/piano_pi\/sounds\/piano\/39160__jobro__piano-ff-013.wav")$/;"	kind:variable	line:15
+sound02.py	../experiments/sound02.py	1;"	kind:file	line:1
 spacing	../controller/ror.py	/^spacing = 5 # Between buttons in Waffle.$/;"	kind:variable	line:14
 spacing	../experiments/waffle03.py	/^spacing = 5$/;"	kind:variable	line:13
 spacing	../experiments/waffle04.py	/^spacing = 5$/;"	kind:variable	line:16
@@ -205,6 +361,7 @@ startStopButton	../legacy/trellis/RobotOrchestra-Trellis.py	/^startStopButton = 
 stop	../controller/ror.py	/^    def stop(self):$/;"	kind:member	line:55
 stop	../experiments/waffle04.py	/^    def stop(self):$/;"	kind:member	line:53
 stop	../legacy/trellis/RobotOrchestra-Trellis.py	/^    def stop(self):$/;"	kind:member	line:59
+stream	../glock/glocktwit.py	/^    stream = MyStreamer(APP_KEY, APP_SECRET, OAUTH_TOKEN, OAUTH_TOKEN_SECRET)$/;"	kind:variable	line:20
 tempo	../controller/ror.py	/^tempo = 120$/;"	kind:variable	line:21
 tempo	../experiments/waffle04.py	/^tempo = 240$/;"	kind:variable	line:21
 tempo	../legacy/trellis/RobotOrchestra-Trellis.py	/^tempo = 120  # Barfs if we go much above 120; playBeat doesn't complete before$/;"	kind:variable	line:24
@@ -215,7 +372,10 @@ time	../legacy/trellis/RobotOrchestra-Trellis.py	/^import time$/;"	kind:namespac
 time	../legacy/trellis/mod_orchestra.py	/^import time$/;"	kind:namespace	line:14
 tkinter01.py	../experiments/tkinter01.py	1;"	kind:file	line:1
 trellis	../legacy/trellis/RobotOrchestra-Trellis.py	/^trellis = Adafruit_Trellis.Adafruit_TrellisSet(matrix0, matrix1, matrix2,$/;"	kind:variable	line:75
+tune	../experiments/piano_pi/piano_pi.py	/^tune = RTTTL(songdict['Oh little star of bethlehem'])$/;"	kind:variable	line:149
+tweet	../glock/songsearcher.py	/^    tweet = "#nustem walking"$/;"	kind:variable	line:28
 twitch	../legacy/trellis/mod_orchestra.py	/^def twitch(robots):$/;"	kind:function	line:34
+twitcredsfile.py	../glock/twitcredsfile.py	1;"	kind:file	line:1
 waffle01.py	../experiments/waffle01.py	1;"	kind:file	line:1
 waffle02.py	../experiments/waffle02.py	1;"	kind:file	line:1
 waffle03.py	../experiments/waffle03.py	1;"	kind:file	line:1
