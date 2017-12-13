@@ -108,7 +108,7 @@ def freq_to_note(freq):
     """
     # h = round(12*log2(freq/C0)) # Python3 only
     h = round(12*(log(freq/C0)/log(2)))
-    octave = (h // 12) - 5
+    octave = (h // 12) - 6
     n = h % 12
     return name[int(n)], int(octave)
 
@@ -150,6 +150,8 @@ tune = RTTTL(songdict['Oh little star of bethlehem'])
 # tune = RTTTL(songdict['Jingle Bells'])
 # tune = RTTTL(songdict['Frosty the snowman'])
 # tune = RTTTL(songdict["I'm dreaming of a white christmas"])
+# tune = RTTTL(songdict['Take On Me'])
+# tune = RTTTL(songdict['Airwolf Theme'])
 
 for freq, msec in tune.notes():
     print(freq, msec)

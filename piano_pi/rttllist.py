@@ -19,6 +19,8 @@ songdict = {
     "Silent Night":"SilentNi:d=4,o=5,b=125:4.g, 8a, 4g, 2.e, 4.g, 8a, 4g, 2.e, 2d6, 4d6, 2.b, 2c6, 4c6, 2.g",
     "Auld Lang Syne":"AuldLang:d=4,o=5,b=100:4g, 4.c6, 8c6, 4c6, 4e6, 4.d6, 8c6, 4d6, 8e6, 8d6, 4.c6, 8c6, 4e6, 4g6, 2.a6, 4a6, 4.g6, 8e6, 4e6, 4c6, 4.d6, 8c6, 4d6, 8e6, 8d6, 4.c6, 8a, 4a, 4g, 2c6",
     "We wish you a merry christmas":"WeWishYo:d=4,o=5,b=140:4d, 4g, 8g, 8a, 8g, 8f#, 4e, 4c, 4e, 4a, 8a, 8b, 8a, 8g, 4f#, 4d, 4f#, 4b, 8b, 8c6, 8b, 8a, 4g, 4e, 4d, 4e, 4a, 4f#, 2g",
-    "We're walking in the air":"Walkingi:d=4,o=5,b=90:8a#6, 8d#7, 8d#7, 8c#7, 8c#7, 1a#6, 8a#6, 8d#7, 8d#7, 8c#7, 8c#7, 4.a#6, 8f#6, 2g#6, 8g#6, 8a#6, 8a#6, 4.g#6, 8d#6, 8f#6, 8f#6, 8f6, 8f6, 2d#6, 8a#6, 8d#7, 8d#7, 8c#7, 8c#7, 1a#6"
+    "We're walking in the air":"Walkingi:d=4,o=5,b=90:8a#6, 8d#7, 8d#7, 8c#7, 8c#7, 1a#6, 8a#6, 8d#7, 8d#7, 8c#7, 8c#7, 4.a#6, 8f#6, 2g#6, 8g#6, 8a#6, 8a#6, 4.g#6, 8d#6, 8f#6, 8f#6, 8f6, 8f6, 2d#6, 8a#6, 8d#7, 8d#7, 8c#7, 8c#7, 1a#6",
+    "Take On Me":"TakeOnMe:d=16,o=5,b=100:8p,a#,a#,a#,8f#,8d#,8g#,8g#,g#,c6,c6,c#6,d#6,c#6,c#6,c#6,8g#,8f#,8a#,8a#,a#,g#,g#,a#,g#,a#,a#,a#,8f#,8d#,8g#,8g#,g#,c6,c6,c#6,d#6,c#6,c#6,c#6,8g#,8f#,8a#,8a#",
+    "Airwolf Theme":"Airwolf:d=16,o=6,b=140:a#5,d#,f,g#,c#7,g#,a#,f,g#,d#,f,g#,a#5,d#,f,g#,c#7,g#,a#,f,g#,d#,f,g#,32p,4a#5,d#,f,g#,4a#,c#7,c7,g#,4a#,c#7,c7,g#,4a#,8g#.,c7,4f,4d#,8c#.,d#,8c.,g#5,4a#5,d#,f,g#,4a#,c#7,c7,g#,4a#,c#7,c7,g#,4a#,8g#.,c7,4f,4d#,8c#.,d#,8c.,g#5,4c#,f#,g#,b,4c#7,f#7,f7,b,4c#7,f#7,f7,b,4c#7,b7,a#7,f#7,1g#7"
 }
 
