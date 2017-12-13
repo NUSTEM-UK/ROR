@@ -2,6 +2,8 @@ from twitcreds import *
 from twython import TwythonStreamer
 from songsearcher import *
 import paho.mqtt.client as mqtt
+from rtttl import RTTTL
+from time import sleep
 
 mqttc = mqtt.Client()
 mqtt_server = "10.0.1.5"
@@ -21,9 +23,17 @@ class MyStreamer(TwythonStreamer):
             print(data['text'])
             a,b,c = searcher(data['text'])
             print(a, b)
+            print("Checking song duration:")
+            tune = RTTTL(c)
+            totalTime = 0
+            for freq, msec in tune.notes():
+                print(freq, msec)
+                totalTime += msec
+            print(totalTime)
             print("Sending RTTTL file to MQTT")
             message(c)
             print("Complete.")
+
 
     def on_error(self, status_code, data):
         print(status_code)
