@@ -46,7 +46,7 @@ class MyStreamer(TwythonStreamer):
             message("orchestra/handle", "@"+userData['screen_name'])
             sleep(0.2)
             message("orchestra/cue", c)
-            print("sending successul")
+            print("sending successful")
             # create a pleasant thank you tweet and send back
             tweet = "@" + userData['screen_name'] + " Thanks for your song request! We're now playing: " + a +  ". Merry Christmas from @nustem_uk"
             print(tweet)
