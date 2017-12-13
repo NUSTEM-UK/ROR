@@ -57,7 +57,7 @@ As of 2017-11-07, GUIzero `version-0.4` branch is working correctly (thanks [@co
 
 1. Why we should be working in virtualenv.
 2. Dual-homing a Raspberry Pi on two wifi networks, with routing to each simultaneously.
-3. Successfully connecting a Pi to our (odd) corporate wifi network, as a side-effect of (2.)
+3. Successfully connecting a Pi to our (odd) university wifi network, as a side-effect of (2.)
 4. Parsing and collation of RTTTL ringtones, which gives us a ready library for the next stage of the project.
 5. Pygame sound generation, which gives us a way of composing for the orchestra without first building a set of instruments.
 6. Decent practice with Python dictionaries, of which we've previously been a bit scared.
