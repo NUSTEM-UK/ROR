@@ -1,5 +1,5 @@
 // Playback-responsive twinkly lights, for extra festivityness.
-// This version sets the whole strip to red / white / green / multicolour
+// This version sets each pixel to one of red, green, or white.
 
 #include <ESP8266WiFi.h>
 #include <PubSubClient.h>
@@ -7,7 +7,7 @@
 
 #define PIN D1
 #define NUMPIXELS 60
-#define BRIGHTNESS 120
+#define BRIGHTNESS 255
 
 // Network & MQTT configuration
 
@@ -116,42 +116,28 @@ void callback(char* topic, byte* payload, unsigned int length) {
     if (topicString == "orchestra/playset") {
         Serial.println(F("UDPATE!"));
 
-        // I don't understand why random(0,4) outputs 0,1,2 or 3, but there you go.
-        switch(random(0,4)) {
-            case 0: 
-                // REDs!
-                Serial.println(F("Choosing shades of RED!"));
-                for(int i = 0; i < NUMPIXELS; i++) {
-                    strip.setPixelColor(i, strip.Color(random(0,BRIGHTNESS),0,0));
-                }
-                break;
-            case 1:
-                // GREENS!
-                Serial.println(F("Choosing shades of GREEN!"));
-                for(int i = 0; i < NUMPIXELS; i++) {
-                    strip.setPixelColor(i, strip.Color(0,random(0,BRIGHTNESS),0));
-                }
-                break;
-            case 2:
-                // WHITE!
-                Serial.println(F("Choosing shades of WHITE!"));
-                for(int i = 0; i < NUMPIXELS; i++) {
-                    int ungreyness=random(0,BRIGHTNESS);
-                    strip.setPixelColor(i, strip.Color(ungreyness, ungreyness, ungreyness));
-                }
-                break;
-            case 3:
-                // All the colours!
-                Serial.println(F("Choosing super sparkle unicorn powers!"));
-                for(int i = 0; i < NUMPIXELS; i++) {
-                    strip.setPixelColor(i, strip.Color(random(0,BRIGHTNESS),random(0,BRIGHTNESS),random(0,BRIGHTNESS)));
-                }
-                break;
-            default:
-                Serial.println(F("Fell through the switch!"));
-                break;
-        }
-        
+        for (int i = 0; i < NUMPIXELS; i++) {
+            switch(random(0,3)) {
+                case 0:
+                    // Pixel going RED
+                    strip.setPixelColor(i, strip.Color(random(0,BRIGHTNESS), 0, 0));
+                    break;
+                case 1:
+                    // Pixel going GREEN
+                    strip.setPixelColor(i, strip.Color(0, random(0,BRIGHTNESS), 0));
+                    break;
+                case 2:
+                    // Pixel going WHITE
+                    { // Need brackets to assign a variable here
+                        int ungreyness = random(0, BRIGHTNESS);
+                        strip.setPixelColor(i, strip.Color(ungreyness, ungreyness, ungreyness));
+                        
+                    }
+                    break;
+                default:
+                    strip.setPixelColor(i, strip.Color(0,0,0));
+            }
+        }        
         strip.show();
         
         delay(50);
