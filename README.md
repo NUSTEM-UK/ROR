@@ -51,3 +51,16 @@ As of 2017-11-07, GUIzero `version-0.4` branch is working correctly (thanks [@co
 
 ...but note that your previous GUIzero projects may need changes. Oh, snap - this is why people do Python development in [virtualenv](https://virtualenv.pypa.io/en/stable/). I get it now.
 
+---
+
+## Things we've learned along the way
+
+1. Why we should be working in virtualenv.
+2. Dual-homing a Raspberry Pi on two wifi networks, with routing to each simultaneously.
+3. Successfully connecting a Pi to our (odd) corporate wifi network, as a side-effect of (2.)
+4. Parsing and collation of RTTTL ringtones, which gives us a ready library for the next stage of the project.
+5. Pygame sound generation, which gives us a way of composing for the orchestra without first building a set of instruments.
+6. Decent practice with Python dictionaries, of which we've previously been a bit scared.
+7. First steps into GUIZero, which is shaping up to be extremely useful for this sort of hack.
+8. Python timers, though we're not yet using threads particularly.
+9. That festive tunes played by bashing bits of copper pipe with servos get old, fast.
