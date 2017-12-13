@@ -41,15 +41,16 @@ class MyStreamer(TwythonStreamer):
 
             # now send the various bits of data: twitter user, song name and RTTTL file to MQTT
             message("orchestra/song", a)
-            time.sleep(0.2)
+            sleep(0.2)
             message("orchestra/handle", "@"+userData['screen_name'])
-            time.sleep(0.2)
+            sleep(0.2)
             message("orchestra/cue", c)
             print("sending successul")
             # create a pleasant thank you tweet and send back
             tweet = "@" + userData['screen_name'] + " Thanks for your song request! We're now playing: " + a +  ". Merry Christmas from @nustem_uk"
             print(tweet)
-            twitter.update_status(status=tweet)
+            twitter.update_status(status=tweet, in_reply_to_status_id=str(data['id']))
+            #twitter.update_status(status=tweet)
 
     def on_error(self, status_code, data):
         print(status_code)
@@ -65,6 +66,6 @@ if __name__ == "__main__":
     while True:
         print("Listening to Twitter")
         #choose your search term wisely - there's a lot of tweets out there
-        stream.statuses.filter(track='#copperglock')
+        stream.statuses.filter(track='#nustemplay')
 
         
