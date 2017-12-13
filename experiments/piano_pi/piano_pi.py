@@ -146,12 +146,57 @@ load_samples(patches[patch_index])
 notedict = {"C":36, "C#":37, "D":38, "D#":39, "E":40, "F":41, "F#":42, "G":43, "G#":44, "A":45, "A#":46, "B":47}
 channeldict = {"C":0, "C#":0, "D":1, "D#":1, "E":2, "F":3, "F#":3, "G":4, "G#":4, "A":5, "A#":5, "B":6}
 
-tune = RTTTL(songdict['Oh little star of bethlehem'])
-# tune = RTTTL(songdict['Jingle Bells'])
-# tune = RTTTL(songdict['Frosty the snowman'])
-# tune = RTTTL(songdict["I'm dreaming of a white christmas"])
-# tune = RTTTL(songdict['Take On Me'])
-# tune = RTTTL(songdict['Airwolf Theme'])
+# tune = RTTTL(songdict["The First Noel"])
+# tune = RTTTL(songdict["Hark the Herald Angels Sing"])
+
+# tune = RTTTL(songdict["Frosty the Snowman"])
+# tune = RTTTL(songdict["We Wish You a Merry Christmas"])
+# tune = RTTTL(songdict["We Wish You a Merry Christmas 2"])
+# tune = RTTTL(songdict["Oh Little Town of Bethlehem"])
+# tune = RTTTL(songdict["On Ilkley Moor"])
+# tune = RTTTL(songdict["The 12 Days of Christmas"])
+# tune = RTTTL(songdict["Rudolph the Red-Nosed Reindeer"])
+# tune = RTTTL(songdict["Santa Claus is Coming To Town"])
+# tune = RTTTL(songdict["Walking in the Air"])
+# tune = RTTTL(songdict["Take On Me"])
+# tune = RTTTL(songdict["Airwolf Theme"])
+# tune = RTTTL(songdict["All I Want for Christmas"])
+# tune = RTTTL(songdict["Do They Know It's Christmas"])
+# tune = RTTTL(songdict["Amazing Grace"])
+# tune = RTTTL(songdict["Deck the Halls"])
+# tune = RTTTL(songdict["God Rest Ye Merry Gentlemen"])
+# tune = RTTTL(songdict["Jingle Bells"])
+# tune = RTTTL(songdict["Joy to the World"])
+# tune = RTTTL(songdict["Last Christmas"])
+# tune = RTTTL(songdict["Last Christmas 2"])
+# tune = RTTTL(songdict["Last Christmas 3"])
+# tune = RTTTL(songdict["Last Christmas 5"])
+# tune = RTTTL(songdict["Let it Snow"])
+# tune = RTTTL(songdict["Oh Christmas Tree"])
+# tune = RTTTL(songdict["Oh Come All Ye Faithful"])
+# tune = RTTTL(songdict["Silent Night"])
+# tune = RTTTL(songdict["We Three Kings"])
+# tune = RTTTL(songdict["Winter Wonderland"])
+# tune = RTTTL(songdict["Away in a Manger"])
+# tune = RTTTL(songdict["Good King Wenceslas"])
+# tune = RTTTL(songdict["Jingle Bells Rock"])
+# tune = RTTTL(songdict["Jingle Bells"])
+# tune = RTTTL(songdict["Little Drummer Boy"])
+# tune = RTTTL(songdict["Oh Christmas Tree"])
+# tune = RTTTL(songdict["I Wish it Could be Christmas Every Day"])
+# tune = RTTTL(songdict["I Wish it Could be Christmas Every Day 2"])
+# tune = RTTTL(songdict["It's Beginning to Look a Lot Like Christmas"])
+# tune = RTTTL(songdict["So This is Christmas"])
+# tune = RTTTL(songdict["Have Yourself a Merry Little Christmas"])
+# tune = RTTTL(songdict["So Here it is Merry Christmas"])
+# tune = RTTTL(songdict["The Prisoner"])
+
+
+string = "Wonderfu:d=4,o=6,b=160:16b5,16p,8b5,8p,8c_,8d_.,1p,p,16p,16b5,16p,8b5,8p,8c_,8d_.,1p,p,16p,16b5,16p,8b5,8p,8c_,8d_,1p,p,8p,16b5,16p,8b5,8p,8c_,8d_.,2p,p,8p,16p,d_,p,c_.,8p,e.,8p,d_,8p,8d_,f_,8e,8d_,8b5,8p,8b5,8p,2b5,2p,d_,p,c_.,8p,e.,8p,d_,8p,8d_,f_,8e,8d_,8b5,8p,8b5,8p,2b5"
+tune = RTTTL(string)
+
+
+
 
 for freq, msec in tune.notes():
     print(freq, msec)
