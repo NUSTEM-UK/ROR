@@ -1,4 +1,5 @@
-from rttllist import *
+#from rttllist import *
+from bigrtttl import *
 # dependency pip3 install fuzzywuzzy
 # pip3 install python-Levenshtein - not dependent but removes an annoying warning
 # fuzzywuzzy does our matching
