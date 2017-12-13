@@ -27,13 +27,11 @@ class MyStreamer(TwythonStreamer):
             tune = RTTTL(c)
             totalTime = 0
             for freq, msec in tune.notes():
-                print(freq, msec)
                 totalTime += msec
             print(totalTime)
             print("Sending RTTTL file to MQTT")
             message(c)
             print("Complete.")
-
 
     def on_error(self, status_code, data):
         print(status_code)
