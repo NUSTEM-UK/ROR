@@ -17,6 +17,8 @@ import paho.mqtt.client as mqtt # requires `pip install paho-mqtt`
 import numpy as np
 # from math import log2, pow # Python3 has a log2
 from math import log, pow
+import dothat.backlight as backlight
+import dothat.lcd as lcd
 
 try:
     pygame.init()
@@ -52,6 +54,11 @@ patch_index = 0
 
 if len(patches) == 0:
     exit("Couldn't find any .wav files in {}".format(BANK))
+
+# Display-o-Tron setup
+lcd.clear()
+lcd.contrast(30)
+lcd.write("SYSTEM START")
 
 
 def natural_sort_key(s, _nsre=re.compile('([0-9]+)')):
@@ -124,6 +131,8 @@ def on_connect(self, client, userdata, rc):
     """Connect to MQTT broker & subscribe to cue channel."""
     print("Connected with result code: " + str(rc))
     self.subscribe("orchestra/cue")
+    self.subscribe("orchestra/song")
+    self.subscribe("orchestra/handle")
 
 def message(topic, payload):
     """Abstract out MQTT connection.
@@ -138,32 +147,49 @@ def playset(beatset):
     message("playset", beatset)
 
 def on_message(client, userdata, msg):
-    """Handle incoming playback cue."""
-    notedict = {"C":36, "C#":37, "D":38, "D#":39, "E":40, "F":41, "F#":42, "G":43, "G#":44, "A":45, "A#":46, "B":47}
-    channeldict = {"C":0, "C#":0, "D":1, "D#":1, "E":2, "F":3, "F#":3, "G":4, "G#":4, "A":5, "A#":5, "B":6}
-
+    """Handle incoming messages."""
     # print("Topic:", msg.topic + '  :  Message: ' + msg.payload)
     print(msg.topic, msg.payload)
+    
+    if msg.topic == "orchestra/cue":
+        lcd.set_cursor_postition(0,0)
+        lcd.write("Now playing:")
 
-    tune = RTTTL(msg.payload)
+        """Handle incoming playback cue."""
+        notedict = {"C":36, "C#":37, "D":38, "D#":39, "E":40, "F":41, "F#":42, "G":43, "G#":44, "A":45, "A#":46, "B":47}
+        channeldict = {"C":0, "C#":0, "D":1, "D#":1, "E":2, "F":3, "F#":3, "G":4, "G#":4, "A":5, "A#":5, "B":6}
+        
+        tune = RTTTL(msg.payload)
 
-    for freq, msec in tune.notes():        
-        # print(freq, msec)
-        if freq != 0.0:
-            note, oct = freq_to_note(freq)
-            print(note, oct)
-            play_beats = list("00000000") # fresh playlist. List so mutable
-            play_beats[channeldict[note]] = "1"
-            playset(''.join(play_beats)) # Command the orchestra!
-            handle_note(notedict[note], oct)
-            sleep(msec/1000.0)
-        else:
-            print('Rest!')
-            sleep(msec/1000.0)
+        for freq, msec in tune.notes():        
+            # print(freq, msec)
+            if freq != 0.0:
+                note, oct = freq_to_note(freq)
+                print(note, oct)
+                play_beats = list("00000000") # fresh playlist. List so mutable
+                play_beats[channeldict[note]] = "1"
+                playset(''.join(play_beats)) # Command the orchestra!
+                handle_note(notedict[note], oct)
+                sleep(msec/1000.0)
+            else:
+                print('Rest!')
+                sleep(msec/1000.0)
 
-    # Make sure the last note plays
-    sleep(0.3)
-    print(">>> Playback complete!")
+        # Make sure the last note plays
+        sleep(0.3)
+        print(">>> Playback complete!")
+        lcd.clear()
+    
+    elif msg.topic == "orchestra/handle":
+        lcd.set_cursor_position(0,2)
+        lcd.write("For: " + msg.payload[:12])
+        
+    elif msg.topic == "orchestra/song":
+        lcd.set_cursor_position(0,1)
+        lcd.write(msg.payload[:16])
+
+    else:
+        print("Well, that didn't work")
 
 load_samples(patches[patch_index])
 
