@@ -22,3 +22,8 @@ And then replace a config file with a symlink to another:
 Finally, right click the tool bar at the top of the screen, open 'Panel Settings' > 'Panel Applets, removes "Wireless & Wired Networks". Then `reboot`.
 
 Once rebooted the new settings can be found in the new icon at the top-right. If you are using two wifi networks, the one you want internet from must be set as default.
+
+## Update
+I ran into a slight problem, Network Manager sets a 'default' network which is the one that is expected to be connected to the internet. You need to change the default to the network that is connected to the internet. 
+
+Do this by right clicking the Network Icons, then Edit Connections. From here select the non-inernet WiFi network and click Edit. In the ipV4 setting, click routes and then check "Use this connection only for resources on this network". Save and reboot.
