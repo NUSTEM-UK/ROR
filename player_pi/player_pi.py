@@ -33,8 +33,8 @@ def on_message(client, userdata, msg):
         # print(i, beat)
         if beat == "1":
             print(i, ": BONG!")
-            myservo[i].max()
-            sleep(0.15)
+            myservo[i].mid()
+            sleep(0.1)
             myservo[i].min()
         else:
             print(i, ": PISH!")
