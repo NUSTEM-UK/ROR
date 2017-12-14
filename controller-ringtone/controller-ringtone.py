@@ -57,9 +57,10 @@ if len(patches) == 0:
 
 # Display-o-Tron setup
 lcd.clear()
-# lcd.set_contrast(30)
-lcd.write("SYSTEM START")
-backlight.graph_off()
+backlight.sweep(5)          # Set a rainbow background
+lcd.set_contrast(50)        # Readable contrast, for our Displayotron HAT
+lcd.write("SYSTEM START")   
+backlight.graph_off()       # Make sure the hellish-bright sidebar LEDs are off
 
 
 def natural_sort_key(s, _nsre=re.compile('([0-9]+)')):
