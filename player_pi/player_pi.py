@@ -33,8 +33,11 @@ def on_message(client, userdata, msg):
         # print(i, beat)
         if beat == "1":
             print(i, ": BONG!")
-            myservo[i].max()
-            sleep(0.15)
+            myservo[i].mid()
+            # FIXME: Notes don't play simultaneously, because of this sleep
+            # (not an issue for RTTTL monophonic tunes, but will be when
+            # we get more advanced.)
+            sleep(0.1)
             myservo[i].min()
         else:
             print(i, ": PISH!")
