@@ -1,4 +1,4 @@
-#from rttllist import *
+from rttllist import *
 from bigrtttl import *
 # dependency pip3 install fuzzywuzzy
 # pip3 install python-Levenshtein - not dependent but removes an annoying warning
@@ -13,6 +13,8 @@ def searcher(tweet):
     bestAccuracy = 0
     # lower case it and list is
     tweet = tweet.lower()
+    # if the tweet contains #easteregg
+    if "#"
  #   tweetList = tweet.split()
     for key, value in songdict.items():
         accuracy = fuzz.token_set_ratio(tweet,key)

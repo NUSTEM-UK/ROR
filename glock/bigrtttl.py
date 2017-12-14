@@ -1,4 +1,4 @@
-songdict = {
+songdictEgg = {
 "'N Sync - Bye Bye Bye":"ByeByeBy:d=4,o=5,b=320:32p,2e.,d.,d.,d.,c.,2e.,2a.4,8d.,8d.,8d.,8c.,d.,c.,2e.,2a.4,d.,d.,d.,e.,2f.,2e.,d.,c.,e.,d.,2c.,2a.4,d.,d.,d.,c.,2e.,2a.4,d.,d.,d.,c.,2e.,2a.4,d.,d.,d.,e.,2f.,2e.,d.,c.,e.,1d,g.,f.,e.,f.,d.,c.,d.,e.,2d.,d.,e.,d.,1c,g.,f.,e.,f.,d.,c.,d.,e.,d.,8a.4,8c.,d.,e.,2d.",
 "'N Sync - I Drive Myself Crazy":"IDriveMy:d=8,o=6,b=45:32p,16a#5,16a#5,16c,c.,16f5,16d#,16d#,d,c,f5,16d#,16d#,d,c,f5,16a#5,16a#5,16c,2c",
 "'N Sync - It's Gonna Be Me":"It'sGonn:d=4,o=4,b=180:32p,8a5,8g5,8f5,8e5,d5,a5,1g5,8g5,8f5,8e5,8d5,c5,g5,1f5,8f5,8e5,8d5,8c5,a#.,d.5,f5,1e5,f.5,g.5,a5,2g5,8a5,8g5,8f5,8e5,d.5,a.5,1g5,8e5,8d5,c.5,g.5,2f.5,2e5,2d.5,f5,8e5,8d5,d5,2d5",
