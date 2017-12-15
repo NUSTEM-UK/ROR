@@ -11,9 +11,9 @@ TL:DR; you may be eaten by a grue.
 
 ## Current status
 
-[![Robot Orchestra first ding](http://img.youtube.com/vi/tOP50V9dVEE/0.jpg)](http://www.youtube.com/watch?v=tOP50V9dVEE "Jingle Bells")
+[![Robotic Glockenspiel](http://img.youtube.com/vi/-eCzMi-BVEc/0.jpg)](http://www.youtube.com/watch?v=-eCzMi-BVEc "Jingle Bells")
 
-This is the system commanded from the GUIZero controller, playing a home-made copper pipe glockenspiel via another Raspberry Pi. Developments since this film was made include Twitter-cued playback from a set of stored festive songs in RTTTL ringtone format. 
+As of Christmas 2017: robot online! Here's our home-made copper pipe glockenspiel playing requests from Twitter. Anything sent to [@NUSTEMxmas](https://twitter.com/@NUSTEMxmas) will be interpreted as a request for a festive song, which is then played back in the NUSTEM office. There's an [outline of this particular implementation on the NUSTEM blog](https://nustem.uk/xmas2017).
 
 ## Outline
 
