@@ -1,6 +1,6 @@
 # import all the modules needed for the mettalophone to run
 from twitcreds import *     # this file stores our Twitter credentials
-from twython import TwythonStreamer, Twython    # here we import Twython which allows us to talk to twitter
+from twython import TwythonStreamer, Twython, TwythonError    # here we import Twython which allows us to talk to twitter
 from songsearcher import *  # this module takes a tweet and matches it with a song
 import paho.mqtt.client as mqtt # paho sends and receives messages over MQTT on our internal network
 from rtttl import RTTTL # this model helps us get the duration of a song
@@ -48,12 +48,12 @@ class MyStreamer(TwythonStreamer):
             message("orchestra/cue", c)
             print("sending successful")
             # create a pleasant thank you tweet and send back
-            tweet = "@" + userData['screen_name'] + " Thanks for your song request! We're now playing: " + a +  ". Merry Christmas from @nustem_uk"
+            tweet = "@" + userData['screen_name'] + " Thanks for your song request! We're now playing: " + a +  ". Merry Christmas from NUSTEM"
             print(tweet)
             try:
                 twitter.update_status(status=tweet, in_reply_to_status_id=str(data['id']))  
-            except:
-                print("Fail!")          
+            except TwythonError as e:
+                print(e)          
 
     def on_error(self, status_code, data):
         print(status_code)
@@ -69,6 +69,6 @@ if __name__ == "__main__":
     while True:
         print("Listening to Twitter")
         #choose your search term wisely - there's a lot of tweets out there
-        stream.statuses.filter(track='#nustemplay')
+        stream.statuses.filter(track='@NUSTEMxmas')
 
         
