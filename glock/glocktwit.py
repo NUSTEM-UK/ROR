@@ -26,11 +26,12 @@ class MyStreamer(TwythonStreamer):
             #print(data['text'])
             userData = data['user']
             print(userData['screen_name'])
+            print(data['text'])
 
             # use the searcher module to match the tweet to a song in our library
             a,b,c = searcher(data['text'])
-            print(a, b)
-            print("Checking song duration:")
+            #print(a, b)
+            #print("Checking song duration:")
 
             # here we check the duration of the song
             tune = RTTTL(c)
@@ -38,7 +39,7 @@ class MyStreamer(TwythonStreamer):
             for freq, msec in tune.notes():
                 totalTime += msec
 
-            print(totalTime)
+            #print(totalTime)
             print("Sending RTTTL file to MQTT")
 
             # now send the various bits of data: twitter user, song name and RTTTL file to MQTT
