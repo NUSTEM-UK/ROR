@@ -27,7 +27,7 @@ message("song", "An E.")
 message("handle", "For Joe. Also Luke.")
 
 # For debugging song playback and testing RTTTL transcripts
-message("cue", "rickastley:d=4,o=5,b=120:8f,a#3,g,8c4,8c,8c4,8g,a3,a,8d4,16c6,16a#,8a,8f,a#3,g,8c4,8c,8c4,8a2,a3,d3,16c,16c,16d,16f,16d4,16f,8f,a#3,g,8c4,8c,8c4,8g,a3,a,8d4,16c6,16a#,8a,8f,a#3,g,8c4,8c,8c4,8e,8f,8f,8a3,d4,16f,8f,16f,8a#2,8f3,8d,8e,8f,8f,8g,8e.,16d,c,8c4,c4,b3,8a#2,8d,8d,8e,8f,8d,8a#3,8c,16c6,8p,16p,8c6,8g,8c7,8g6,8c8,8g7,8a#2,8d,8d,8e,8f,8d,8f,8g,8c4,8e,8d,8c,c4,b3,8a#2,8d,8d,8e,8f,8d,c,8g,8g,8g,8a,g,b3,8f,8a#3,8a#2,8a#3,8a#2,8g,8a,8f,8g,8g,8g,8a,8g,8c4,8c,8c4,8a#2,8a#3,8a#2,8a#3,8d,8e,8f,8d,16c4,16p,8g,8a,g.,16c,16d,16f,16d,16a.,16p,32p,8a,16p,g.,16c,16d,16f,16d,16g.,16p,32p,8g,16p,8f.,16e,8d,16c,16d,16f,16d,f,8g,8e.,16d,8c,8c4,8c,8g,8p,2f,16c,16d,16f,16d,16a.,16p,32p,8a,16p,g.,16c,16d,16f,16d,c6,8e,8f.,16e,8d,16c,16d,16f,16d,f,8g,8e.,16d,8c,8c4,8c,8g,8p,2f")
+message("cue", "DeckTheH:d=8,o=6,b=140:4g.,f,4e,4d,4c,4d,4e,4c,d,e,f,d,4e.,d,4c,4b5,2c,4g.,f,4e,4d,4c,4d,e,b5,c,g5,d,e,f,d,4e,c,d,c,a5,b5,f5,2c,4d.,e,4f,4d,4e.,f,4g,4d,e,f#,g,d5,a,b,4c7,4b,a,c,g,a5,g5,f5,4g.,f,4e,4d,4c,4d,4e,4c,a,a,a,a,4g.,f,4e,4d,2")
 
 # For hammer alignment - uncomment individually
 # message("playset", "10000000") # C

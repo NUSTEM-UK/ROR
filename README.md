@@ -19,7 +19,7 @@ This is the system commanded from the GUIZero controller, playing a home-made co
 
 Our Robot Orchestra consists of a collection of instruments, each played by a microcontroller. These are typically Wemos D1 mini-based platforms, although a Pi/Python client also now exists. Every player connects to a common network over wifi, and subscribes to an MQTT topic (`orchestra/playset`) which broadcasts note commands. Each player is also assigned (in software configuration, or in the case of Wemos-based players at runtime via patch cables) a channel number, which determines which note from the playset is responded to.
 
-Possilbe system controllers are:
+Possible system controllers are:
 * An Adafruit Hella UNTZtrument-based hardware control surface, which is tactile and pretty but constrained to 8 channels / 16 beat loops.
 * A (GUIZero-based) software implementation of that interface, which is configurable to a practical maxium of about 64 beat sequences before the GUI buttons are small enough to make your eyes go funny.
 * An RTTTL ringtone interpreter, which is itself commanded over MQTT (see below).
