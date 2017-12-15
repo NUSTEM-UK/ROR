@@ -6,6 +6,7 @@ import paho.mqtt.client as mqtt # paho sends and receives messages over MQTT on 
 from rtttl import RTTTL # this model helps us get the duration of a song
 from time import sleep # bedtime
 from videos import *    # import link sto all the video files
+from rttllist import *
 
 # set up the variables for the MQTT server
 mqttc = mqtt.Client()
@@ -58,10 +59,10 @@ class MyStreamer(TwythonStreamer):
             tweet = "@" + userData['screen_name'] + " Thanks for your song request. We're " + str(b) + "%" + " sure you requested: " + a + ". Merry Christmas from NUSTEM. " + vidURL
             #tweet = "@" + userData['screen_name'] + " Thanks for your song request! We're now playing: " + a +  ". Merry Christmas from NUSTEM. " + vidURL
             print(tweet)
-            if a == "Never Going To Give You Up":
+            if a in eggs:
                 try:
-                    print("Rick rolling")
-                    photo = open('giphy.gif', 'rb')
+                    print("Easter Egg!")
+                    photo = open(egg[a], 'rb')
                     response = twitter.upload_media(media=photo)
                     twitter.update_status(status=tweet, media_ids=[response['media_id']])
                     print("Upload successful")
