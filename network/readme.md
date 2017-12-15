@@ -13,3 +13,7 @@ At some point we should update this to clean UTF-8 text, the current output is a
 ## mqtt-test.py
 
 Fires commands across the network to test different behaviours. See internal comments for details.
+
+## repertoire.py
+
+Steps through the entire repertoire in sequence. Note that (since we're not sharing code between directories here) there's a duplicate of both the song list and the RTTTL parser class within this directory. Yes, this is poor practice of us.
