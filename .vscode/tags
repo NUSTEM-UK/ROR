@@ -37,10 +37,11 @@ I2C_BUS	../legacy/trellis/RobotOrchestra-Trellis.py	/^I2C_BUS = 1$/;"	kind:varia
 Label	../experiments/tkinter01.py	/^from tkinter import Tk, Label, Button$/;"	kind:namespace	line:1
 MQTT	../glock/glocktwit.py	/^import paho.mqtt.client as mqtt # paho sends and receives messages over MQTT on our internal network$/;"	kind:namespace	line:5
 MyFirstGUI	../experiments/tkinter01.py	/^class MyFirstGUI:$/;"	kind:class	line:3
-MyStreamer	../glock/glocktwit.py	/^class MyStreamer(TwythonStreamer):$/;"	kind:class	line:20
+MyStreamer	../glock/glocktwit.py	/^class MyStreamer(TwythonStreamer):$/;"	kind:class	line:21
 NOTE	../controller-ringtone/rtttl.py	/^NOTE = [$/;"	kind:variable	line:10
 NOTE	../experiments/piano_pi/rtttl.py	/^NOTE = [$/;"	kind:variable	line:10
 NOTE	../glock/rtttl.py	/^NOTE = [$/;"	kind:variable	line:10
+NOTE	../network/rtttl.py	/^NOTE = [$/;"	kind:variable	line:10
 NOTE_OFFSET	../controller-ringtone/controller-ringtone.py	/^NOTE_OFFSET = 0$/;"	kind:variable	line:30
 NOTE_OFFSET	../experiments/piano_pi/piano_pi.py	/^NOTE_OFFSET = 0$/;"	kind:variable	line:25
 NOTE_OFFSET	../experiments/sound02.py	/^NOTE_OFFSET = 3$/;"	kind:variable	line:22
@@ -57,6 +58,8 @@ RTTTL	../experiments/piano_pi/piano_pi.py	/^from rtttl import RTTTL$/;"	kind:nam
 RTTTL	../experiments/piano_pi/rtttl.py	/^class RTTTL:$/;"	kind:class	line:30
 RTTTL	../glock/glocktwit.py	/^from rtttl import RTTTL # this model helps us get the duration of a song$/;"	kind:namespace	line:6
 RTTTL	../glock/rtttl.py	/^class RTTTL:$/;"	kind:class	line:30
+RTTTL	../network/repertoire.py	/^from rtttl import RTTTL$/;"	kind:namespace	line:9
+RTTTL	../network/rtttl.py	/^class RTTTL:$/;"	kind:class	line:30
 RepeatedTimer	../controller/ror.py	/^class RepeatedTimer(object):$/;"	kind:class	line:27
 RepeatedTimer	../experiments/waffle04.py	/^class RepeatedTimer(object):$/;"	kind:class	line:25
 RepeatedTimer	../legacy/trellis/RobotOrchestra-Trellis.py	/^class RepeatedTimer(object):$/;"	kind:class	line:31
@@ -71,8 +74,9 @@ Timer	../experiments/waffle04.py	/^from threading import Timer$/;"	kind:namespac
 Timer	../legacy/trellis/RobotOrchestra-Trellis.py	/^from threading import Timer$/;"	kind:namespace	line:16
 Tk	../experiments/tkinter01.py	/^from tkinter import Tk, Label, Button$/;"	kind:namespace	line:1
 Twitter	../glock/glocktwit.py	/^from twitcreds import *     # this file stores our Twitter credentials$/;"	kind:namespace	line:2
-Twython	../glock/glocktwit.py	/^from twython import TwythonStreamer, Twython    # here we import Twython which allows us to talk to twitter$/;"	kind:namespace	line:3
-TwythonStreamer	../glock/glocktwit.py	/^from twython import TwythonStreamer, Twython    # here we import Twython which allows us to talk to twitter$/;"	kind:namespace	line:3
+Twython	../glock/glocktwit.py	/^from twython import TwythonStreamer, Twython, TwythonError    # here we import Twython which allows us to talk to twitter$/;"	kind:namespace	line:3
+TwythonError	../glock/glocktwit.py	/^from twython import TwythonStreamer, Twython, TwythonError    # here we import Twython which allows us to talk to twitter$/;"	kind:namespace	line:3
+TwythonStreamer	../glock/glocktwit.py	/^from twython import TwythonStreamer, Twython, TwythonError    # here we import Twython which allows us to talk to twitter$/;"	kind:namespace	line:3
 Waffle	../controller/ror.py	/^from guizero import App, Waffle, Text, Box, PushButton$/;"	kind:namespace	line:7
 Waffle	../experiments/guizero_layout01.py	/^from guizero import App, Waffle, PushButton, Box$/;"	kind:namespace	line:1
 Waffle	../experiments/guizero_test01.py	/^from guizero import App, Waffle$/;"	kind:namespace	line:12
@@ -87,13 +91,15 @@ __init__	../experiments/tkinter01.py	/^    def __init__(self, master):$/;"	kind:
 __init__	../experiments/waffle04.py	/^    def __init__(self, interval, function, *args):$/;"	kind:member	line:31
 __init__	../glock/rtttl.py	/^    def __init__(self, tune):$/;"	kind:member	line:32
 __init__	../legacy/trellis/RobotOrchestra-Trellis.py	/^    def __init__(self, interval, function, *args):$/;"	kind:member	line:37
+__init__	../network/rtttl.py	/^    def __init__(self, tune):$/;"	kind:member	line:32
 _run	../controller/ror.py	/^    def _run(self):$/;"	kind:member	line:42
 _run	../experiments/waffle04.py	/^    def _run(self):$/;"	kind:member	line:40
 _run	../legacy/trellis/RobotOrchestra-Trellis.py	/^    def _run(self):$/;"	kind:member	line:46
 a	../glock/glocktwit.py	/^from rtttl import RTTTL # this model helps us get the duration of a song$/;"	kind:namespace	line:6
 a	../glock/glocktwit.py	/^from songsearcher import *  # this module takes a tweet and matches it with a song$/;"	kind:namespace	line:4
+all	../glock/glocktwit.py	/^from videos import *    # import link sto all the video files$/;"	kind:namespace	line:8
 allFiles	../glock/00rtttlreader.py	/^allFiles = glob.glob('*.txt')$/;"	kind:variable	line:3
-allows	../glock/glocktwit.py	/^from twython import TwythonStreamer, Twython    # here we import Twython which allows us to talk to twitter$/;"	kind:namespace	line:3
+allows	../glock/glocktwit.py	/^from twython import TwythonStreamer, Twython, TwythonError    # here we import Twython which allows us to talk to twitter$/;"	kind:namespace	line:3
 and	../glock/glocktwit.py	/^from songsearcher import *  # this module takes a tweet and matches it with a song$/;"	kind:namespace	line:4
 and	../glock/glocktwit.py	/^import paho.mqtt.client as mqtt # paho sends and receives messages over MQTT on our internal network$/;"	kind:namespace	line:5
 app	../controller/ror.py	/^app = App("Robot Orchestra", height=(50 + padding + num_channels*(dimension+spacing)),$/;"	kind:variable	line:173
@@ -149,6 +155,7 @@ dothat	../controller-ringtone/controller-ringtone.py	/^import dothat.lcd as lcd$
 dothat	../display/display.py	/^import dothat.backlight as backlight$/;"	kind:namespace	line:10
 dothat	../display/display.py	/^import dothat.lcd as lcd$/;"	kind:namespace	line:11
 duration	../glock/glocktwit.py	/^from rtttl import RTTTL # this model helps us get the duration of a song$/;"	kind:namespace	line:6
+duration	../network/repertoire.py	/^    duration = get_duration(tune)$/;"	kind:variable	line:30
 exit	../controller-ringtone/controller-ringtone.py	/^from sys import exit$/;"	kind:namespace	line:12
 exit	../experiments/piano_pi/piano_pi.py	/^from sys import exit$/;"	kind:namespace	line:12
 exit	../experiments/sound02.py	/^from sys import exit$/;"	kind:namespace	line:13
@@ -159,11 +166,13 @@ fileText	../glock/00rtttlreader.py	/^        fileText = "\\n\\"" + songname + "\
 files	../controller-ringtone/controller-ringtone.py	/^files = []$/;"	kind:variable	line:33
 files	../experiments/piano_pi/piano_pi.py	/^files = []$/;"	kind:variable	line:28
 files	../experiments/sound02.py	/^files = []$/;"	kind:variable	line:25
+files	../glock/glocktwit.py	/^from videos import *    # import link sto all the video files$/;"	kind:namespace	line:8
 frame	../experiments/guizero_test01.py	/^frame = Frame(my_waffle, width=100, height=100)$/;"	kind:variable	line:33
 freq_to_note	../controller-ringtone/controller-ringtone.py	/^def freq_to_note(freq):$/;"	kind:function	line:120
 freq_to_note	../experiments/piano_pi/piano_pi.py	/^def freq_to_note(freq):$/;"	kind:function	line:103
 fuzz	../glock/songsearcher.py	/^from fuzzywuzzy import fuzz$/;"	kind:namespace	line:6
 get	../glock/glocktwit.py	/^from rtttl import RTTTL # this model helps us get the duration of a song$/;"	kind:namespace	line:6
+get_duration	../network/repertoire.py	/^def get_duration(rtttl_melody):$/;"	kind:function	line:19
 glob	../controller-ringtone/controller-ringtone.py	/^import glob$/;"	kind:namespace	line:7
 glob	../experiments/piano_pi/piano_pi.py	/^import glob$/;"	kind:namespace	line:7
 glob	../experiments/sound02.py	/^import glob$/;"	kind:namespace	line:7
@@ -182,8 +191,9 @@ handle_octave_up	../controller-ringtone/controller-ringtone.py	/^def handle_octa
 handle_octave_up	../experiments/piano_pi/piano_pi.py	/^def handle_octave_up():$/;"	kind:function	line:75
 handle_octave_up	../experiments/sound02.py	/^def handle_octave_up():$/;"	kind:function	line:67
 helps	../glock/glocktwit.py	/^from rtttl import RTTTL # this model helps us get the duration of a song$/;"	kind:namespace	line:6
-here	../glock/glocktwit.py	/^from twython import TwythonStreamer, Twython    # here we import Twython which allows us to talk to twitter$/;"	kind:namespace	line:3
-import	../glock/glocktwit.py	/^from twython import TwythonStreamer, Twython    # here we import Twython which allows us to talk to twitter$/;"	kind:namespace	line:3
+here	../glock/glocktwit.py	/^from twython import TwythonStreamer, Twython, TwythonError    # here we import Twython which allows us to talk to twitter$/;"	kind:namespace	line:3
+import	../glock/glocktwit.py	/^from twython import TwythonStreamer, Twython, TwythonError    # here we import Twython which allows us to talk to twitter$/;"	kind:namespace	line:3
+import	../glock/glocktwit.py	/^from videos import *    # import link sto all the video files$/;"	kind:namespace	line:8
 install	../controller-ringtone/controller-ringtone.py	/^import paho.mqtt.client as mqtt # requires `pip install paho-mqtt`$/;"	kind:namespace	line:16
 install	../controller/ror.py	/^import paho.mqtt.client as mqtt # requires `pip install paho-mqtt`$/;"	kind:namespace	line:6
 instruments	../legacy/trellis/instruments.py	/^instruments = {"00": "skutter_18:FE:34:FD:91:AD",$/;"	kind:variable	line:3
@@ -193,6 +203,7 @@ internal	../glock/glocktwit.py	/^import paho.mqtt.client as mqtt # paho sends an
 it	../glock/glocktwit.py	/^from songsearcher import *  # this module takes a tweet and matches it with a song$/;"	kind:namespace	line:4
 lcd	../controller-ringtone/controller-ringtone.py	/^import dothat.lcd as lcd$/;"	kind:namespace	line:21
 lcd	../display/display.py	/^import dothat.lcd as lcd$/;"	kind:namespace	line:11
+link	../glock/glocktwit.py	/^from videos import *    # import link sto all the video files$/;"	kind:namespace	line:8
 load_samples	../controller-ringtone/controller-ringtone.py	/^def load_samples(patch):$/;"	kind:function	line:70
 load_samples	../experiments/piano_pi/piano_pi.py	/^def load_samples(patch):$/;"	kind:function	line:53
 load_samples	../experiments/sound02.py	/^def load_samples(patch):$/;"	kind:function	line:45
@@ -210,9 +221,10 @@ matrix6	../legacy/trellis/RobotOrchestra-Trellis.py	/^matrix6 = Adafruit_Trellis
 matrix7	../legacy/trellis/RobotOrchestra-Trellis.py	/^matrix7 = Adafruit_Trellis.Adafruit_Trellis()$/;"	kind:variable	line:73
 message	../controller-ringtone/controller-ringtone.py	/^def message(topic, payload):$/;"	kind:function	line:139
 message	../controller/ror.py	/^def message(topic, payload):$/;"	kind:function	line:72
-message	../glock/glocktwit.py	/^def message(topic, payload):$/;"	kind:function	line:15
+message	../glock/glocktwit.py	/^def message(topic, payload):$/;"	kind:function	line:16
 message	../legacy/trellis/mod_orchestra.py	/^def message(topic, payload):$/;"	kind:function	line:24
 message	../network/mqtt-test.py	/^def message(topic, payload):$/;"	kind:function	line:13
+message	../network/repertoire.py	/^def message(topic, payload):$/;"	kind:function	line:15
 messages	../glock/glocktwit.py	/^import paho.mqtt.client as mqtt # paho sends and receives messages over MQTT on our internal network$/;"	kind:namespace	line:5
 mod_orchestra.py	../legacy/trellis/mod_orchestra.py	1;"	kind:file	line:1
 model	../glock/glocktwit.py	/^from rtttl import RTTTL # this model helps us get the duration of a song$/;"	kind:namespace	line:6
@@ -226,18 +238,21 @@ mqtt	../legacy/trellis/mod_orchestra.py	/^import paho.mqtt.client as mqtt$/;"	ki
 mqtt	../network/mqtt-test.py	/^import paho.mqtt.client as mqtt$/;"	kind:namespace	line:7
 mqtt	../network/mqttsub-announce.py	/^import paho.mqtt.client as mqtt$/;"	kind:namespace	line:7
 mqtt	../network/mqttsub.py	/^import paho.mqtt.client as mqtt$/;"	kind:namespace	line:2
+mqtt	../network/repertoire.py	/^import paho.mqtt.client as mqtt$/;"	kind:namespace	line:7
 mqtt	../player_pi/player_pi.py	/^import paho.mqtt.client as mqtt$/;"	kind:namespace	line:9
 mqtt-test.py	../network/mqtt-test.py	1;"	kind:file	line:1
 mqtt_server	../controller-ringtone/controller-ringtone.py	/^mqtt_server = "10.0.1.5"$/;"	kind:variable	line:44
 mqtt_server	../controller/ror.py	/^mqtt_server = "10.0.1.5"$/;"	kind:variable	line:62
-mqtt_server	../glock/glocktwit.py	/^mqtt_server = "10.0.1.5"$/;"	kind:variable	line:11
+mqtt_server	../glock/glocktwit.py	/^mqtt_server = "10.0.1.5"$/;"	kind:variable	line:12
 mqtt_server	../legacy/trellis/mod_orchestra.py	/^mqtt_server = "10.0.1.5"$/;"	kind:variable	line:20
 mqtt_server	../network/mqtt-test.py	/^mqtt_server = "10.0.1.5"$/;"	kind:variable	line:11
+mqtt_server	../network/repertoire.py	/^mqtt_server = "10.0.1.5"$/;"	kind:variable	line:13
 mqttc	../controller-ringtone/controller-ringtone.py	/^mqttc = mqtt.Client()$/;"	kind:variable	line:42
 mqttc	../controller/ror.py	/^mqttc = mqtt.Client()$/;"	kind:variable	line:61
-mqttc	../glock/glocktwit.py	/^mqttc = mqtt.Client()$/;"	kind:variable	line:10
+mqttc	../glock/glocktwit.py	/^mqttc = mqtt.Client()$/;"	kind:variable	line:11
 mqttc	../legacy/trellis/mod_orchestra.py	/^mqttc = mqtt.Client()$/;"	kind:variable	line:18
 mqttc	../network/mqtt-test.py	/^mqttc = mqtt.Client()$/;"	kind:variable	line:10
+mqttc	../network/repertoire.py	/^mqttc = mqtt.Client()$/;"	kind:variable	line:12
 mqttsub-announce.py	../network/mqttsub-announce.py	1;"	kind:file	line:1
 mqttsub.py	../network/mqttsub.py	1;"	kind:file	line:1
 my_box	../experiments/guizero_layout01.py	/^my_box = Box(app, layout="grid")$/;"	kind:variable	line:8
@@ -259,10 +274,12 @@ network	../glock/glocktwit.py	/^import paho.mqtt.client as mqtt # paho sends and
 next_char	../controller-ringtone/rtttl.py	/^    def next_char(self):$/;"	kind:member	line:61
 next_char	../experiments/piano_pi/rtttl.py	/^    def next_char(self):$/;"	kind:member	line:61
 next_char	../glock/rtttl.py	/^    def next_char(self):$/;"	kind:member	line:61
+next_char	../network/rtttl.py	/^    def next_char(self):$/;"	kind:member	line:61
 notedict	../experiments/piano_pi/piano_pi.py	/^notedict = {"C":36, "C#":37, "D":38, "D#":39, "E":40, "F":41, "F#":42, "G":43, "G#":44, "A":45, "A#":46, "B":47}$/;"	kind:variable	line:146
 notes	../controller-ringtone/rtttl.py	/^    def notes(self):$/;"	kind:member	line:70
 notes	../experiments/piano_pi/rtttl.py	/^    def notes(self):$/;"	kind:member	line:70
 notes	../glock/rtttl.py	/^    def notes(self):$/;"	kind:member	line:70
+notes	../network/rtttl.py	/^    def notes(self):$/;"	kind:member	line:70
 np	../controller-ringtone/controller-ringtone.py	/^import numpy as np$/;"	kind:namespace	line:17
 np	../controller/ror.py	/^import numpy as np$/;"	kind:namespace	line:8
 np	../experiments/waffle04.py	/^import numpy as np$/;"	kind:namespace	line:6
@@ -287,13 +304,13 @@ on_connect	../experiments/player_pi_test.py	/^def on_connect(client, userdata, r
 on_connect	../network/mqttsub-announce.py	/^def on_connect(client, userdata, rc):$/;"	kind:function	line:10
 on_connect	../network/mqttsub.py	/^def on_connect(self, client, userdata, rc):$/;"	kind:function	line:5
 on_connect	../player_pi/player_pi.py	/^def on_connect(self, client, userdata, rc):$/;"	kind:function	line:22
-on_error	../glock/glocktwit.py	/^    def on_error(self, status_code, data):$/;"	kind:member	line:55
+on_error	../glock/glocktwit.py	/^    def on_error(self, status_code, data):$/;"	kind:member	line:79
 on_message	../controller-ringtone/controller-ringtone.py	/^def on_message(client, userdata, msg):$/;"	kind:function	line:151
 on_message	../experiments/player_pi_test.py	/^def on_message(client, userdata, msg):$/;"	kind:function	line:13
 on_message	../network/mqttsub-announce.py	/^def on_message(client, userdata, msg):$/;"	kind:function	line:16
 on_message	../network/mqttsub.py	/^def on_message(client, userdata, msg):$/;"	kind:function	line:13
 on_message	../player_pi/player_pi.py	/^def on_message(client, userdata, msg):$/;"	kind:function	line:28
-on_success	../glock/glocktwit.py	/^    def on_success(self, data):$/;"	kind:member	line:21
+on_success	../glock/glocktwit.py	/^    def on_success(self, data):$/;"	kind:member	line:22
 os	../controller-ringtone/controller-ringtone.py	/^import os$/;"	kind:namespace	line:8
 os	../experiments/piano_pi/piano_pi.py	/^import os$/;"	kind:namespace	line:8
 os	../experiments/sound02.py	/^import os$/;"	kind:namespace	line:8
@@ -312,10 +329,12 @@ paho	../legacy/trellis/mod_orchestra.py	/^import paho.mqtt.client as mqtt$/;"	ki
 paho	../network/mqtt-test.py	/^import paho.mqtt.client as mqtt$/;"	kind:namespace	line:7
 paho	../network/mqttsub-announce.py	/^import paho.mqtt.client as mqtt$/;"	kind:namespace	line:7
 paho	../network/mqttsub.py	/^import paho.mqtt.client as mqtt$/;"	kind:namespace	line:2
+paho	../network/repertoire.py	/^import paho.mqtt.client as mqtt$/;"	kind:namespace	line:7
 paho	../player_pi/player_pi.py	/^import paho.mqtt.client as mqtt$/;"	kind:namespace	line:9
 parse_defaults	../controller-ringtone/rtttl.py	/^    def parse_defaults(self, defaults):$/;"	kind:member	line:40
 parse_defaults	../experiments/piano_pi/rtttl.py	/^    def parse_defaults(self, defaults):$/;"	kind:member	line:40
 parse_defaults	../glock/rtttl.py	/^    def parse_defaults(self, defaults):$/;"	kind:member	line:40
+parse_defaults	../network/rtttl.py	/^    def parse_defaults(self, defaults):$/;"	kind:member	line:40
 patch_index	../controller-ringtone/controller-ringtone.py	/^patch_index = 0$/;"	kind:variable	line:53
 patch_index	../experiments/piano_pi/piano_pi.py	/^patch_index = 0$/;"	kind:variable	line:43
 patch_index	../experiments/sound02.py	/^patch_index = 0$/;"	kind:variable	line:35
@@ -347,6 +366,7 @@ re	../controller-ringtone/controller-ringtone.py	/^import re$/;"	kind:namespace	
 re	../experiments/piano_pi/piano_pi.py	/^import re$/;"	kind:namespace	line:9
 re	../experiments/sound02.py	/^import re$/;"	kind:namespace	line:9
 receives	../glock/glocktwit.py	/^import paho.mqtt.client as mqtt # paho sends and receives messages over MQTT on our internal network$/;"	kind:namespace	line:5
+repertoire.py	../network/repertoire.py	1;"	kind:file	line:1
 requires	../controller-ringtone/controller-ringtone.py	/^import paho.mqtt.client as mqtt # requires `pip install paho-mqtt`$/;"	kind:namespace	line:16
 requires	../controller/ror.py	/^import paho.mqtt.client as mqtt # requires `pip install paho-mqtt`$/;"	kind:namespace	line:6
 root	../experiments/tkinter01.py	/^root = Tk()$/;"	kind:variable	line:20
@@ -360,11 +380,13 @@ rt	../legacy/trellis/RobotOrchestra-Trellis.py	/^rt = RepeatedTimer(bpm, playBea
 rttllist.py	../controller-ringtone/rttllist.py	1;"	kind:file	line:1
 rttllist.py	../experiments/piano_pi/rttllist.py	1;"	kind:file	line:1
 rttllist.py	../glock/rttllist.py	1;"	kind:file	line:1
+rttllist.py	../network/rttllist.py	1;"	kind:file	line:1
 rtttl	../glock/00rtttlreader.py	/^        rtttl = f.read()$/;"	kind:variable	line:15
 rtttl	../glock/00rtttlreader.py	/^        rtttl = rtttl.rstrip()$/;"	kind:variable	line:17
 rtttl.py	../controller-ringtone/rtttl.py	1;"	kind:file	line:1
 rtttl.py	../experiments/piano_pi/rtttl.py	1;"	kind:file	line:1
 rtttl.py	../glock/rtttl.py	1;"	kind:file	line:1
+rtttl.py	../network/rtttl.py	1;"	kind:file	line:1
 running	../controller/ror.py	/^running = True$/;"	kind:variable	line:25
 running	../experiments/waffle04.py	/^running = True$/;"	kind:variable	line:23
 running	../legacy/trellis/RobotOrchestra-Trellis.py	/^                running = False$/;"	kind:variable	line:220
@@ -401,6 +423,7 @@ sleep	../experiments/sound01.py	/^from time import sleep$/;"	kind:namespace	line
 sleep	../experiments/sound02.py	/^from time import sleep$/;"	kind:namespace	line:12
 sleep	../glock/glocktwit.py	/^from time import sleep # bedtime$/;"	kind:namespace	line:7
 sleep	../network/mqtt-test.py	/^from time import sleep$/;"	kind:namespace	line:8
+sleep	../network/repertoire.py	/^from time import sleep$/;"	kind:namespace	line:8
 sleep	../player_pi/player_pi.py	/^from time import sleep$/;"	kind:namespace	line:10
 slowerButton	../controller/ror.py	/^def slowerButton():$/;"	kind:function	line:160
 song	../glock/glocktwit.py	/^from rtttl import RTTTL # this model helps us get the duration of a song$/;"	kind:namespace	line:6
@@ -410,6 +433,7 @@ songdict	../controller-ringtone/rttllist.py	/^songdict = {$/;"	kind:variable	lin
 songdict	../experiments/piano_pi/piano_pi.py	/^from rttllist import songdict$/;"	kind:namespace	line:14
 songdict	../experiments/piano_pi/rttllist.py	/^songdict = {$/;"	kind:variable	line:1
 songdict	../glock/rttllist.py	/^songdict = {$/;"	kind:variable	line:1
+songdict	../network/rttllist.py	/^songdict = {$/;"	kind:variable	line:1
 songdictEgg	../glock/bigrtttl.py	/^songdictEgg = {$/;"	kind:variable	line:1
 songname	../glock/00rtttlreader.py	/^    songname = i.replace(".txt","")$/;"	kind:variable	line:11
 songs.py	../controller-ringtone/sounds/songs.py	1;"	kind:file	line:1
@@ -427,19 +451,21 @@ start	../experiments/waffle04.py	/^    def start(self):$/;"	kind:member	line:46
 start	../legacy/trellis/RobotOrchestra-Trellis.py	/^    def start(self):$/;"	kind:member	line:52
 startStopButton	../controller/ror.py	/^def startStopButton():$/;"	kind:function	line:131
 startStopButton	../legacy/trellis/RobotOrchestra-Trellis.py	/^startStopButton = Button(5, pull_up=True, bounce_time=0.2)$/;"	kind:variable	line:27
+sto	../glock/glocktwit.py	/^from videos import *    # import link sto all the video files$/;"	kind:namespace	line:8
 stop	../controller/ror.py	/^    def stop(self):$/;"	kind:member	line:55
 stop	../experiments/waffle04.py	/^    def stop(self):$/;"	kind:member	line:53
 stop	../legacy/trellis/RobotOrchestra-Trellis.py	/^    def stop(self):$/;"	kind:member	line:59
 stores	../glock/glocktwit.py	/^from twitcreds import *     # this file stores our Twitter credentials$/;"	kind:namespace	line:2
-stream	../glock/glocktwit.py	/^    stream = MyStreamer(APP_KEY, APP_SECRET, OAUTH_TOKEN, OAUTH_TOKEN_SECRET)$/;"	kind:variable	line:64
+stream	../glock/glocktwit.py	/^    stream = MyStreamer(APP_KEY, APP_SECRET, OAUTH_TOKEN, OAUTH_TOKEN_SECRET)$/;"	kind:variable	line:88
 takes	../glock/glocktwit.py	/^from songsearcher import *  # this module takes a tweet and matches it with a song$/;"	kind:namespace	line:4
-talk	../glock/glocktwit.py	/^from twython import TwythonStreamer, Twython    # here we import Twython which allows us to talk to twitter$/;"	kind:namespace	line:3
+talk	../glock/glocktwit.py	/^from twython import TwythonStreamer, Twython, TwythonError    # here we import Twython which allows us to talk to twitter$/;"	kind:namespace	line:3
 tempo	../controller/ror.py	/^tempo = 120$/;"	kind:variable	line:21
 tempo	../experiments/waffle04.py	/^tempo = 240$/;"	kind:variable	line:21
 tempo	../legacy/trellis/RobotOrchestra-Trellis.py	/^tempo = 120  # Barfs if we go much above 120; playBeat doesn't complete before$/;"	kind:variable	line:24
 textBpm	../controller/ror.py	/^textBpm = Text(box, text="120", grid=[1,0])$/;"	kind:variable	line:179
 textBpmLabel	../controller/ror.py	/^textBpmLabel = Text(box, text="bpm", grid=[0,0])$/;"	kind:variable	line:178
 the	../glock/glocktwit.py	/^from rtttl import RTTTL # this model helps us get the duration of a song$/;"	kind:namespace	line:6
+the	../glock/glocktwit.py	/^from videos import *    # import link sto all the video files$/;"	kind:namespace	line:8
 this	../glock/glocktwit.py	/^from rtttl import RTTTL # this model helps us get the duration of a song$/;"	kind:namespace	line:6
 this	../glock/glocktwit.py	/^from songsearcher import *  # this module takes a tweet and matches it with a song$/;"	kind:namespace	line:4
 this	../glock/glocktwit.py	/^from twitcreds import *     # this file stores our Twitter credentials$/;"	kind:namespace	line:2
@@ -447,23 +473,27 @@ time	../experiments/waffle04.py	/^import time$/;"	kind:namespace	line:4
 time	../legacy/trellis/RobotOrchestra-Trellis.py	/^import time$/;"	kind:namespace	line:15
 time	../legacy/trellis/mod_orchestra.py	/^import time$/;"	kind:namespace	line:14
 tkinter01.py	../experiments/tkinter01.py	1;"	kind:file	line:1
-to	../glock/glocktwit.py	/^from twython import TwythonStreamer, Twython    # here we import Twython which allows us to talk to twitter$/;"	kind:namespace	line:3
+to	../glock/glocktwit.py	/^from twython import TwythonStreamer, Twython, TwythonError    # here we import Twython which allows us to talk to twitter$/;"	kind:namespace	line:3
 trellis	../legacy/trellis/RobotOrchestra-Trellis.py	/^trellis = Adafruit_Trellis.Adafruit_TrellisSet(matrix0, matrix1, matrix2,$/;"	kind:variable	line:75
 tune	../experiments/piano_pi/piano_pi.py	/^tune = RTTTL(string)$/;"	kind:variable	line:196
+tune	../network/repertoire.py	/^    tune = RTTTL(cue)$/;"	kind:variable	line:29
 tweet	../glock/glocktwit.py	/^from songsearcher import *  # this module takes a tweet and matches it with a song$/;"	kind:namespace	line:4
 tweet	../glock/songsearcher.py	/^    tweet = "#nustem walking"$/;"	kind:variable	line:38
 twitch	../legacy/trellis/mod_orchestra.py	/^def twitch(robots):$/;"	kind:function	line:34
 twitcredsfile.py	../glock/twitcredsfile.py	1;"	kind:file	line:1
-twitter	../glock/glocktwit.py	/^    twitter = Twython(APP_KEY, APP_SECRET,OAUTH_TOKEN, OAUTH_TOKEN_SECRET)$/;"	kind:variable	line:65
-twitter	../glock/glocktwit.py	/^from twython import TwythonStreamer, Twython    # here we import Twython which allows us to talk to twitter$/;"	kind:namespace	line:3
+twitter	../glock/glocktwit.py	/^    twitter = Twython(APP_KEY, APP_SECRET,OAUTH_TOKEN, OAUTH_TOKEN_SECRET)$/;"	kind:variable	line:89
+twitter	../glock/glocktwit.py	/^from twython import TwythonStreamer, Twython, TwythonError    # here we import Twython which allows us to talk to twitter$/;"	kind:namespace	line:3
 us	../glock/glocktwit.py	/^from rtttl import RTTTL # this model helps us get the duration of a song$/;"	kind:namespace	line:6
-us	../glock/glocktwit.py	/^from twython import TwythonStreamer, Twython    # here we import Twython which allows us to talk to twitter$/;"	kind:namespace	line:3
+us	../glock/glocktwit.py	/^from twython import TwythonStreamer, Twython, TwythonError    # here we import Twython which allows us to talk to twitter$/;"	kind:namespace	line:3
+video	../glock/glocktwit.py	/^from videos import *    # import link sto all the video files$/;"	kind:namespace	line:8
+videos	../glock/videos.py	/^videos = {"Santa Claus is Coming to Town":"https:\/\/youtu.be\/Z1k6Ya7qucQ",$/;"	kind:variable	line:1
+videos.py	../glock/videos.py	1;"	kind:file	line:1
 waffle01.py	../experiments/waffle01.py	1;"	kind:file	line:1
 waffle02.py	../experiments/waffle02.py	1;"	kind:file	line:1
 waffle03.py	../experiments/waffle03.py	1;"	kind:file	line:1
 waffle04.py	../experiments/waffle04.py	1;"	kind:file	line:1
-we	../glock/glocktwit.py	/^from twython import TwythonStreamer, Twython    # here we import Twython which allows us to talk to twitter$/;"	kind:namespace	line:3
-which	../glock/glocktwit.py	/^from twython import TwythonStreamer, Twython    # here we import Twython which allows us to talk to twitter$/;"	kind:namespace	line:3
+we	../glock/glocktwit.py	/^from twython import TwythonStreamer, Twython, TwythonError    # here we import Twython which allows us to talk to twitter$/;"	kind:namespace	line:3
+which	../glock/glocktwit.py	/^from twython import TwythonStreamer, Twython, TwythonError    # here we import Twython which allows us to talk to twitter$/;"	kind:namespace	line:3
 width	../controller/ror.py	/^          width=(padding + num_beats*(dimension + spacing)))$/;"	kind:variable	line:174
 with	../glock/glocktwit.py	/^from songsearcher import *  # this module takes a tweet and matches it with a song$/;"	kind:namespace	line:4
 x	../display/display.py	/^x = 0$/;"	kind:variable	line:24
