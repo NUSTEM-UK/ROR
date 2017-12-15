@@ -1,7 +1,7 @@
 """Command the system directly for testing purposes.
 
 Basic MQTT messaging client, allows broadcast of commands to different elements
-of the system. Comment out the 
+of the system. Comment out the bits you don't want to test!
 """
 
 import paho.mqtt.client as mqtt
