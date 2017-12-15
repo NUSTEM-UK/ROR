@@ -55,11 +55,12 @@ class MyStreamer(TwythonStreamer):
             else:
                 vidURL = ""
             # create a pleasant thank you tweet and send back
-            #tweet = "Thanks for your song request. We're " + str(b) + "%% sure you requested: " + a + ". Merry Christmas from NUSTEM. " + vidURL
-            tweet = "@" + userData['screen_name'] + " Thanks for your song request! We're now playing: " + a +  ". Merry Christmas from NUSTEM. " + vidURL
+            tweet = "@" + userData['screen_name'] + " Thanks for your song request. We're " + str(b) + "%" + " sure you requested: " + a + ". Merry Christmas from NUSTEM. " + vidURL
+            #tweet = "@" + userData['screen_name'] + " Thanks for your song request! We're now playing: " + a +  ". Merry Christmas from NUSTEM. " + vidURL
             print(tweet)
             try:
                 twitter.update_status(status=tweet, in_reply_to_status_id=str(data['id']))  
+                print("Tweet sent succesffully")
             except TwythonError as e:
                 print(e)          
 
