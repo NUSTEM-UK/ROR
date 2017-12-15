@@ -61,8 +61,8 @@ class MyStreamer(TwythonStreamer):
             if a == "Never Going To Give You Up":
                 try:
                     print("Rick rolling")
-                    video = open('giphy.mp4', 'rb')
-                    response = twitter.upload_video(media=video, media_type='video/mp4')
+                    video = open('giphy.gif', 'rb')
+                    response = twitter.upload_video(media=photo)
                     twitter.update_status(status=tweet, media_ids=[response['media_id']])
                     print("Upload successful")
                     video.close()
