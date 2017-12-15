@@ -26,7 +26,7 @@ class MyStreamer(TwythonStreamer):
             #print(data['text'])
             userData = data['user']
             print(userData['screen_name'])
-            print(data['text'])
+            #print(data['text'])
 
             # use the searcher module to match the tweet to a song in our library
             a,b,c = searcher(data['text'])
