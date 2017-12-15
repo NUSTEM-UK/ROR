@@ -61,18 +61,18 @@ class MyStreamer(TwythonStreamer):
             if a == "Never Going To Give You Up":
                 try:
                     print("Rick rolling")
-                    video = open('giphy.gif', 'rb')
-                    response = twitter.upload_video(media=photo)
+                    photo = open('giphy.gif', 'rb')
+                    response = twitter.upload_media(media=photo)
                     twitter.update_status(status=tweet, media_ids=[response['media_id']])
                     print("Upload successful")
-                    video.close()
+                    photo.close()
                     print("Video closed")
                 except TwythonError as e:
                     print(e) 
             else:
                 try:
                     twitter.update_status(status=tweet, in_reply_to_status_id=str(data['id']))  
-                    print("Tweet sent succesffully")
+                    print("Tweet sent succesfully")
                 except TwythonError as e:
                     print(e)          
 
