@@ -58,11 +58,23 @@ class MyStreamer(TwythonStreamer):
             tweet = "@" + userData['screen_name'] + " Thanks for your song request. We're " + str(b) + "%" + " sure you requested: " + a + ". Merry Christmas from NUSTEM. " + vidURL
             #tweet = "@" + userData['screen_name'] + " Thanks for your song request! We're now playing: " + a +  ". Merry Christmas from NUSTEM. " + vidURL
             print(tweet)
-            try:
-                twitter.update_status(status=tweet, in_reply_to_status_id=str(data['id']))  
-                print("Tweet sent succesffully")
-            except TwythonError as e:
-                print(e)          
+            if a == "Never Going To Give You Up":
+                try:
+                    print("Rick rolling")
+                    video = open('giphy.mp4', 'rb')
+                    response = twitter.upload_video(media=video, media_type='video/mp4')
+                    twitter.update_status(status=tweet, media_ids=[response['media_id']])
+                    print("Upload successful")
+                    video.close()
+                    print("Video closed")
+                except TwythonError as e:
+                    print(e) 
+            else:
+                try:
+                    twitter.update_status(status=tweet, in_reply_to_status_id=str(data['id']))  
+                    print("Tweet sent succesffully")
+                except TwythonError as e:
+                    print(e)          
 
     def on_error(self, status_code, data):
         print(status_code)
