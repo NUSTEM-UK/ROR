@@ -69,6 +69,6 @@ if __name__ == "__main__":
     while True:
         print("Listening to Twitter")
         #choose your search term wisely - there's a lot of tweets out there
-        #stream.statuses.filter(track='@NUSTEMxmas')
-        stream.user()
+        stream.statuses.filter(track='@NUSTEMxmas')
+        #stream.user()
         
