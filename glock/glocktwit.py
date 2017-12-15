@@ -59,7 +59,7 @@ class MyStreamer(TwythonStreamer):
             tweet = "@" + userData['screen_name'] + " Thanks for your song request. We're " + str(b) + "%" + " sure you requested: " + a + ". Merry Christmas from NUSTEM. " + vidURL
             #tweet = "@" + userData['screen_name'] + " Thanks for your song request! We're now playing: " + a +  ". Merry Christmas from NUSTEM. " + vidURL
             print(tweet)
-            if a in eggs:
+            if a in egg:
                 try:
                     print("Easter Egg!")
                     photo = open(egg[a], 'rb')
