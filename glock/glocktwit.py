@@ -5,6 +5,7 @@ from songsearcher import *  # this module takes a tweet and matches it with a so
 import paho.mqtt.client as mqtt # paho sends and receives messages over MQTT on our internal network
 from rtttl import RTTTL # this model helps us get the duration of a song
 from time import sleep # bedtime
+from videos import *    # import link sto all the video files
 
 # set up the variables for the MQTT server
 mqttc = mqtt.Client()
@@ -47,8 +48,15 @@ class MyStreamer(TwythonStreamer):
             sleep(0.2)
             message("orchestra/cue", c)
             print("sending successful")
+
+            #check to see if we have the video
+            if a in videos:
+                vidURL = videos[a]
+            else:
+                vidURL = ""
             # create a pleasant thank you tweet and send back
-            tweet = "@" + userData['screen_name'] + " Thanks for your song request! We're now playing: " + a +  ". Merry Christmas from NUSTEM"
+            #tweet = "Thanks for your song request. We're " + str(b) + "%% sure you requested: " + a + ". Merry Christmas from NUSTEM. " + vidURL
+            tweet = "@" + userData['screen_name'] + " Thanks for your song request! We're now playing: " + a +  ". Merry Christmas from NUSTEM. " + vidURL
             print(tweet)
             try:
                 twitter.update_status(status=tweet, in_reply_to_status_id=str(data['id']))  
@@ -70,5 +78,5 @@ if __name__ == "__main__":
         print("Listening to Twitter")
         #choose your search term wisely - there's a lot of tweets out there
         stream.statuses.filter(track='@NUSTEMxmas')
-
+        #stream.user()
         
