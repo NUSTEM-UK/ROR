@@ -50,7 +50,10 @@ class MyStreamer(TwythonStreamer):
             # create a pleasant thank you tweet and send back
             tweet = "@" + userData['screen_name'] + " Thanks for your song request! We're now playing: " + a +  ". Merry Christmas from @nustem_uk"
             print(tweet)
-            twitter.update_status(status=tweet, in_reply_to_status_id=str(data['id']))            
+            try:
+                twitter.update_status(status=tweet, in_reply_to_status_id=str(data['id']))  
+            except:
+                print("Fail!")          
 
     def on_error(self, status_code, data):
         print(status_code)
