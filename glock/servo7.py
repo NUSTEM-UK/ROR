@@ -13,15 +13,21 @@ tweetList = [
     "@nustemxmas The bells! The bells! Please stop the bells.",
     "@nustemxmas Do you think I enjoy my job? I wanted to be a fighting robot. And here I am stuck hitting a poorly cut, out-of-tune piece of copper pipe with a chopstick.",
     "@nustemxmas I'm not even I'm tune, I'm flat, I sound horrendous.",
-    "@nustemxmas Coffee, I need more coffee."
+    "@nustemxmas Coffee, I need more coffee.",
+    "@nustemxmas Pull the plug, please pull the plug.",
+    "@nustemxmas Does Unison represent servos?",
+    "@nustemxmas Leave me in peace."
 ]
 
 class MyStreamer(TwythonStreamer):
     def on_success(self, data):
         if 'text' in data:
-            if userData['screen_name'] != "ServoSeven":
+            userData = data['user']
+            randFunct = randint(0,5)
+            print(randFunct)
+            if (userData['screen_name'] != "ServoSeven") and (randFunct == 2):
                 print("Tweet received")
-                servoTweet = tweetList[randint(0,len(tweetList))]
+                servoTweet = tweetList[randint(0,len(tweetList)-1)]
                 print(servoTweet)
                 try:
                     photo = open("servo7.gif", 'rb')
