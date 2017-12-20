@@ -19,20 +19,19 @@ tweetList = [
 class MyStreamer(TwythonStreamer):
     def on_success(self, data):
         if 'text' in data:
-            if userData['screen_name'] == "ServoSeven":
-                continue
-            print("Tweet received")
-            servoTweet = tweetList[randint(0,len(tweetList))]
-            print(servoTweet)
-            try:
-                photo = open("servo7.gif", 'rb')
-                response = SEVENtwitter.upload_media(media=photo)
-                SEVENtwitter.update_status(status=servoTweet, media_ids=[response['media_id']])
-                print("Upload successful")
-                photo.close()
-                print("Video closed")
-            except TwythonError as e:
-                print(e) 
+            if userData['screen_name'] != "ServoSeven":
+                print("Tweet received")
+                servoTweet = tweetList[randint(0,len(tweetList))]
+                print(servoTweet)
+                try:
+                    photo = open("servo7.gif", 'rb')
+                    response = SEVENtwitter.upload_media(media=photo)
+                    SEVENtwitter.update_status(status=servoTweet, media_ids=[response['media_id']])
+                    print("Upload successful")
+                    photo.close()
+                    print("Video closed")
+                except TwythonError as e:
+                    print(e) 
 
     def on_error(self, status_code, data):
         print(status_code)

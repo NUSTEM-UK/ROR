@@ -27,58 +27,63 @@ class MyStreamer(TwythonStreamer):
             userData = data['user']
             print(userData['screen_name'])
 
+<<<<<<< HEAD
+            if userData['screen_name'] != "ServoSeven":
+=======
             if userData['screen_name'] == "ServoSeven":
+                print("Servo7")
                 continue
+>>>>>>> 16a34f97e48fdccbb4dffb819a27cd7d9824e2bf
 
-            # use the searcher module to match the tweet to a song in our library
-            a,b,c = searcher(data['text'])
-            print(a, b)
-            print("Checking song duration:")
+                # use the searcher module to match the tweet to a song in our library
+                a,b,c = searcher(data['text'])
+                print(a, b)
+                print("Checking song duration:")
 
-            # here we check the duration of the song
-            tune = RTTTL(c)
-            totalTime = 0
-            for freq, msec in tune.notes():
-                totalTime += msec
+                # here we check the duration of the song
+                tune = RTTTL(c)
+                totalTime = 0
+                for freq, msec in tune.notes():
+                    totalTime += msec
 
-            print(totalTime)
-            print("Sending RTTTL file to MQTT")
+                print(totalTime)
+                print("Sending RTTTL file to MQTT")
 
-            # now send the various bits of data: twitter user, song name and RTTTL file to MQTT
-            
-            message("orchestra/song", a)
-            sleep(0.2)
-            message("orchestra/handle", "@"+userData['screen_name'])
-            sleep(0.2)
-            message("orchestra/cue", c)
-            print("sending successful")
+                # now send the various bits of data: twitter user, song name and RTTTL file to MQTT
+                
+                message("orchestra/song", a)
+                sleep(0.2)
+                message("orchestra/handle", "@"+userData['screen_name'])
+                sleep(0.2)
+                message("orchestra/cue", c)
+                print("sending successful")
 
-            #check to see if we have the video
-            if a in videos:
-                vidURL = videos[a]
-            else:
-                vidURL = ""
-            # create a pleasant thank you tweet and send back
-            tweet = "@" + userData['screen_name'] + " Thanks for your song request. We're " + str(b) + "%" + " sure you requested: " + a + ". Merry Christmas from NUSTEM. " + vidURL
-            #tweet = "@" + userData['screen_name'] + " Thanks for your song request! We're now playing: " + a +  ". Merry Christmas from NUSTEM. " + vidURL
-            print(tweet)
-            if a in egg:
-                try:
-                    print("Easter Egg!")
-                    photo = open(egg[a], 'rb')
-                    response = twitter.upload_media(media=photo)
-                    twitter.update_status(status=tweet, media_ids=[response['media_id']])
-                    print("Upload successful")
-                    photo.close()
-                    print("Video closed")
-                except TwythonError as e:
-                    print(e) 
-            else:
-                try:
-                    twitter.update_status(status=tweet, in_reply_to_status_id=str(data['id']))  
-                    print("Tweet sent succesfully")
-                except TwythonError as e:
-                    print(e)          
+                #check to see if we have the video
+                if a in videos:
+                    vidURL = videos[a]
+                else:
+                    vidURL = ""
+                # create a pleasant thank you tweet and send back
+                tweet = "@" + userData['screen_name'] + " Thanks for your song request. We're " + str(b) + "%" + " sure you requested: " + a + ". Merry Christmas from NUSTEM. " + vidURL
+                #tweet = "@" + userData['screen_name'] + " Thanks for your song request! We're now playing: " + a +  ". Merry Christmas from NUSTEM. " + vidURL
+                print(tweet)
+                if a in egg:
+                    try:
+                        print("Easter Egg!")
+                        photo = open(egg[a], 'rb')
+                        response = twitter.upload_media(media=photo)
+                        twitter.update_status(status=tweet, media_ids=[response['media_id']])
+                        print("Upload successful")
+                        photo.close()
+                        print("Video closed")
+                    except TwythonError as e:
+                        print(e) 
+                else:
+                    try:
+                        twitter.update_status(status=tweet, in_reply_to_status_id=str(data['id']))  
+                        print("Tweet sent succesfully")
+                    except TwythonError as e:
+                        print(e)          
 
     def on_error(self, status_code, data):
         print(status_code)
