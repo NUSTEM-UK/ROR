@@ -44,5 +44,6 @@ egg = {
     "Airwolf Theme":"airwolf.gif",
     "The Prisoner":"prisoner.gif",
     "Never Going To Give You Up":"rick.gif"
+    "Take On Me":"takeonme.gif"
 }
 
