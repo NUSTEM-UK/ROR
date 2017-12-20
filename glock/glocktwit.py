@@ -27,13 +27,7 @@ class MyStreamer(TwythonStreamer):
             userData = data['user']
             print(userData['screen_name'])
 
-<<<<<<< HEAD
             if userData['screen_name'] != "ServoSeven":
-=======
-            if userData['screen_name'] == "ServoSeven":
-                print("Servo7")
-                continue
->>>>>>> 16a34f97e48fdccbb4dffb819a27cd7d9824e2bf
 
                 # use the searcher module to match the tweet to a song in our library
                 a,b,c = searcher(data['text'])
