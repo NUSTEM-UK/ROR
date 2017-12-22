@@ -3,10 +3,9 @@ from twitcreds import *     # this file stores our Twitter credentials
 from twython import TwythonStreamer, Twython, TwythonError    # here we import Twython which allows us to talk to twitter
 from songsearcher import *  # this module takes a tweet and matches it with a song
 import paho.mqtt.client as mqtt # paho sends and receives messages over MQTT on our internal network
-from rtttl import RTTTL # this model helps us get the duration of a song
 from time import sleep # bedtime
 from videos import *    # import link sto all the video files
-from rttllist import *
+from rttllist import * 
 
 # set up the variables for the MQTT server
 mqttc = mqtt.Client()
@@ -22,30 +21,17 @@ def message(topic, payload):
 class MyStreamer(TwythonStreamer):
     def on_success(self, data):
         if 'text' in data:
-            #print(data)
-            #print(data['text'])
             userData = data['user']
             print(userData['screen_name'])
-            #print(data['text'])
 
+            #filter out the Servo7 witter user so that we don't end up in a Twython loop
             if userData['screen_name'] != "ServoSeven":
-
                 # use the searcher module to match the tweet to a song in our library
                 a,b,c = searcher(data['text'])
                 print(a, b)
-                print("Checking song duration:")
-
-                # here we check the duration of the song
-                tune = RTTTL(c)
-                totalTime = 0
-                for freq, msec in tune.notes():
-                    totalTime += msec
-
-                print(totalTime)
-                print("Sending RTTTL file to MQTT")
-
-                # now send the various bits of data: twitter user, song name and RTTTL file to MQTT
                 
+                print("Sending RTTTL file to MQTT")
+                # now send the various bits of data: twitter user, song name and RTTTL file to MQTT
                 message("orchestra/song", a)
                 sleep(0.2)
                 message("orchestra/handle", "@"+userData['screen_name'])
@@ -60,8 +46,10 @@ class MyStreamer(TwythonStreamer):
                     vidURL = ""
                 # create a pleasant thank you tweet and send back
                 tweet = "@" + userData['screen_name'] + " Thanks for your song request. We're " + str(b) + "%" + " sure you requested: " + a + ". Merry Christmas from NUSTEM. " + vidURL
-                #tweet = "@" + userData['screen_name'] + " Thanks for your song request! We're now playing: " + a +  ". Merry Christmas from NUSTEM. " + vidURL
+
                 print(tweet)
+
+                #check if the tweet is requesting an Easter Egg
                 if a in egg:
                     try:
                         print("Easter Egg!")
@@ -82,9 +70,6 @@ class MyStreamer(TwythonStreamer):
 
     def on_error(self, status_code, data):
         print(status_code)
-        # Want to stop trying to get data because of the error?
-        # Uncomment the next line!
-        # self.disconnect()
 
 # if __name__ == "__main__" means this code will only run if this is the main python code (not imported as a module)
 if __name__ == "__main__":
@@ -95,5 +80,3 @@ if __name__ == "__main__":
         print("Listening to Twitter")
         #choose your search term wisely - there's a lot of tweets out there
         stream.statuses.filter(track='@NUSTEMxmas')
-        #stream.user()
-        
