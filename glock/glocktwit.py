@@ -26,6 +26,7 @@ class MyStreamer(TwythonStreamer):
             #print(data['text'])
             userData = data['user']
             print(userData['screen_name'])
+            #print(data['text'])
 
             if userData['screen_name'] != "ServoSeven":
 
